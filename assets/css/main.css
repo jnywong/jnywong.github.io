@@ -2601,7 +2601,7 @@ input, select, textarea {
 		background-image: /*url("images/overlay.png"),*/ url("../../images/bg.jpg");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
-		background-size: cover;								/*100%;*/
+		background-size: cover;								100%;
 		color: rgba(255, 255, 255, 0.5);
 		height: 150%;
 		left: 0;
