@@ -2598,12 +2598,12 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #ffffff;
 		background-attachment: scroll,								scroll;
-		background-image: /*url("images/overlay.png"),*/ url("../../images/bg.jpg");
-		background-position: top left,							top left;
+		background-image: url("images/overlay.png"), url("../../images/bg2.jpg");
+		background-position: center center,							center center;
 		background-repeat: repeat,								no-repeat;
 		background-size: cover;								100%;
 		color: rgba(255, 255, 255, 0.5);
-		height: 150%;
+		height: 180%;
 		left: 0;
 		padding: 8em 4em;
 		position: fixed;
@@ -2708,7 +2708,7 @@ input, select, textarea {
 /* Maps reponsive */
 .map-responsive{
     overflow:hidden;
-    padding-bottom:56.25%;
+    padding-bottom:75%;
     position:relative;
     height:0;
 }
