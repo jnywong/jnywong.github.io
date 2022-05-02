@@ -256,6 +256,45 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121591406-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-121591406-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -277,8 +316,8 @@
     <link rel="manifest" href="/manifest.webmanifest" />
   
 
-  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hu6373ebd6d80ed4ceb3a80f784b685de6_1111_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu6373ebd6d80ed4ceb3a80f784b685de6_1111_180x180_fill_lanczos_center_3.png" />
 
   <link rel="canonical" href="https://jnywong.github.io/project/convect-jl/" />
 
@@ -301,12 +340,9 @@
   
   <meta property="twitter:card" content="summary_large_image" />
   
-    <meta property="twitter:site" content="@wowchemy" />
-    <meta property="twitter:creator" content="@wowchemy" />
-  
-  <meta property="og:site_name" content="Hugo Portfolio Theme" />
+  <meta property="og:site_name" content="Jenny Wong" />
   <meta property="og:url" content="https://jnywong.github.io/project/convect-jl/" />
-  <meta property="og:title" content="convect-jl | Hugo Portfolio Theme" />
+  <meta property="og:title" content="convect-jl | Jenny Wong" />
   <meta property="og:description" content="An open source Julia code to simulate 2D convection in a Cartesian box." /><meta property="og:image" content="https://jnywong.github.io/project/convect-jl/featured.png" />
     <meta property="twitter:image" content="https://jnywong.github.io/project/convect-jl/featured.png" /><meta property="og:locale" content="en-us" />
   
@@ -356,10 +392,10 @@
   
   "publisher": {
     "@type": "Organization",
-    "name": "Hugo Portfolio Theme",
+    "name": "Jenny Wong",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://jnywong.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
+      "url": "https://jnywong.github.io/media/icon_hu6373ebd6d80ed4ceb3a80f784b685de6_1111_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "An open source Julia code to simulate 2D convection in a Cartesian box."
@@ -378,7 +414,7 @@
 
 
 
-  <title>convect-jl | Hugo Portfolio Theme</title>
+  <title>convect-jl | Jenny Wong</title>
 </head>
 
 
@@ -487,36 +523,6 @@
 
           <li class="nav-item">
             <a class="nav-link " href="/about/"><span>About</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/2022-05-16-birmingham/"><span>Python Carpentries</span></a>
           </li>
 
           
@@ -1179,7 +1185,7 @@ zeroth= 1 # plot zeroth mode?
 
   
   <p class="powered-by copyright-license-text">
-    © 2022 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+    © {2022} Jenny Wong. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
   </p>
   
 

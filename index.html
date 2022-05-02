@@ -64,7 +64,7 @@
   
     
   
-  <meta name="description" content="A highly-customizable Hugo blog theme powered by Wowchemy website builder." />
+  <meta name="description" content="Senior Research Software Engineer, Advanced Research Computing, University of Birmingham, UK." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://jnywong.github.io/" />
@@ -262,6 +262,45 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121591406-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-121591406-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -280,15 +319,15 @@
   
 
   
-    <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Hugo Portfolio Theme" />
+    <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Jenny Wong" />
   
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
   
 
-  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hu6373ebd6d80ed4ceb3a80f784b685de6_1111_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu6373ebd6d80ed4ceb3a80f784b685de6_1111_180x180_fill_lanczos_center_3.png" />
 
   <link rel="canonical" href="https://jnywong.github.io/" />
 
@@ -312,14 +351,11 @@
   
   <meta property="twitter:card" content="summary" />
   
-    <meta property="twitter:site" content="@wowchemy" />
-    <meta property="twitter:creator" content="@wowchemy" />
-  
-  <meta property="og:site_name" content="Hugo Portfolio Theme" />
+  <meta property="og:site_name" content="Jenny Wong" />
   <meta property="og:url" content="https://jnywong.github.io/" />
-  <meta property="og:title" content="Hugo Portfolio Theme" />
-  <meta property="og:description" content="A highly-customizable Hugo blog theme powered by Wowchemy website builder." /><meta property="og:image" content="https://jnywong.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
-    <meta property="twitter:image" content="https://jnywong.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:title" content="Jenny Wong" />
+  <meta property="og:description" content="Senior Research Software Engineer, Advanced Research Computing, University of Birmingham, UK." /><meta property="og:image" content="https://jnywong.github.io/media/icon_hu6373ebd6d80ed4ceb3a80f784b685de6_1111_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://jnywong.github.io/media/icon_hu6373ebd6d80ed4ceb3a80f784b685de6_1111_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta property="og:updated_time" content="2021-08-08T00:00:00&#43;00:00" />
@@ -346,7 +382,7 @@
 
 
 
-  <title>Hugo Portfolio Theme</title>
+  <title>Jenny Wong</title>
 </head>
 
 
@@ -454,36 +490,6 @@
 
           <li class="nav-item">
             <a class="nav-link " href="/about/"><span>About</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/2022-05-16-birmingham/"><span>Python Carpentries</span></a>
           </li>
 
           
@@ -1273,7 +1279,7 @@
 
   
   <p class="powered-by copyright-license-text">
-    © 2022 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+    © {2022} Jenny Wong. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
   </p>
   
 
