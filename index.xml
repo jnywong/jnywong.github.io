@@ -37,6 +37,640 @@
     </item>
     
     <item>
+      <title>convect-jl</title>
+      <link>https://jnywong.github.io/project/convect-jl/</link>
+      <pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://jnywong.github.io/project/convect-jl/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://opensource.org/licenses/MIT&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/License-MIT-yellow.svg&#34; alt=&#34;License: MIT&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=&#34;https://raw.githubusercontent.com/jnywong/convect-jl/main/docs/figures/video.gif&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;Welcome! Here is my Julia code to simulate 2D convection in a Cartesian box. Theory and methods used can be found in &lt;a href=&#34;https://press.princeton.edu/books/hardcover/9780691141725/introduction-to-modeling-convection-in-planets-and-stars&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction to Modeling Convection in Planets and Stars: Magnetic Field, Density Stratification, Rotation&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;h3 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://julialang.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Julia&lt;/a&gt; (version 1.6)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;package-structure&#34;&gt;Package structure&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;convect-jl
+    docs/
+    src/
+        convect_linear.jl
+        convect_nonlinear.jl
+        critical_ra.jl
+        data_utils.jl
+        postprocess.jl
+        routines.jl
+    LICENSE.md
+    README.md
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;h3 id=&#34;linear-convection&#34;&gt;Linear convection&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code&gt;src/convect_linear.jl&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Specify input parameters&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Inputs
+nz = 101 # no. of vertical gridpoints
+nn = 30 # no. of horizontal Fourier modes (excluding zeroth mode)
+a = 5 # L/D aspect ratio
+Ra = 2700 # Rayleigh number
+Pr = 0.5 # Prandtl number
+nt = 1e5 # no. of timesteps
+nout = 1e3 # output every nout timesteps
+zeroth = 0 # include zeroth order temperature in plot?
+initOn = 1
+saveDir = &amp;#34;/Users/wongj/Documents/convect-out/linear/2021-09-03&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Run script from terminal using &lt;code&gt;julia &amp;lt;working directory&amp;gt;/convect-jl/src/convect_linear.jl&lt;/code&gt; (or from julia REPL using &lt;code&gt;include(&amp;quot;&amp;lt;working directory&amp;gt;/convect-jl/src/convect_linear.jl&amp;quot;)&lt;/code&gt; )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Admire the output:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;docs/figures/linear.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;nonlinear-convection&#34;&gt;Nonlinear convection&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code&gt;src/convect_nonlinear.jl&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Specify input parameters&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Inputs
+nz = 101 # no. of vertical gridpoints
+nn = 50 # no. of Fourier modes (excluding zeroth mode)
+a = 3 # L/D aspect ratio
+Ra = 1e6 # Rayleigh number
+Pr = 0.5 # Prandtl number
+dt = 3e-6 # timestep size
+nt = 1e4 # no. of timesteps
+nout = 1e2 # save output every nout timesteps
+initOn = 1 # initialise run, otherwise load existing data
+saveDir = &amp;#34;/Users/wongj/Documents/convect-out/2021-09-03&amp;#34; # save directory
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Run script from terminal using &lt;code&gt;julia &amp;lt;working directory&amp;gt;/convect-jl/src/convect_nonlinear.jl&lt;/code&gt; (or from julia REPL using &lt;code&gt;include(&amp;quot;&amp;lt;working directory&amp;gt;/convect-jl/src/convect_nonlinear.jl&amp;quot;)&lt;/code&gt; )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Postprocess and visualise the data using &lt;code&gt;julia &amp;lt;working directory&amp;gt;/convect-jl/src/postprocess.jl&lt;/code&gt; (or from julia REPL using &lt;code&gt;include(&amp;quot;&amp;lt;working directory&amp;gt;/convect-jl/src/postprocess.jl&amp;quot;)&lt;/code&gt; ) with the following input parameters&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Inputs
+saveDir = &amp;#34;/Users/wongj/Documents/convect-out/2021-09-03&amp;#34; # save directory
+nStart = 1
+nEnd = 500
+zeroth= 1 # plot zeroth mode?
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Admire the output:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/convect-jl/main/docs/figures/video.gif&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;authors&#34;&gt;Authors&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://jnywong.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jenny Wong&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;Institut des Sciences de la Terre&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;This project is licensed under the MIT License - see the &lt;a href=&#34;LICENSE.md&#34;&gt;LICENSE.md&lt;/a&gt; file for details&lt;/p&gt;
+&lt;p&gt;🎉&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>paropy</title>
+      <link>https://jnywong.github.io/project/paropy/</link>
+      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://jnywong.github.io/project/paropy/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://badge.fury.io/py/paropy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://badge.fury.io/py/paropy.svg&#34; alt=&#34;PyPI version&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;
+&lt;a href=&#34;https://opensource.org/licenses/MIT&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/License-MIT-yellow.svg&#34; alt=&#34;License: MIT&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;paropy&#34;&gt;paropy&lt;/h1&gt;
+&lt;p&gt;Welcome! Here is my Python package to process data from PARODY-JA4.3 dynamo simulations with a stably-stratified F-layer at the base of the outer core.&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bitbucket.org/nschaeff/shtns/src/master/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SHTns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ancklo/ChaosMagPy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ChaosMagPy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;installing&#34;&gt;Installing&lt;/h3&gt;
+&lt;p&gt;Conda:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;conda install -c jnywong paropy
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pip:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip install paropy
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Git:&lt;/p&gt;
+&lt;p&gt;Find the Git repo &lt;a href=&#34;https://github.com/jnywong/nondim-slurry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;warning-ipython-issue&#34;&gt;Warning: IPython issue&lt;/h4&gt;
+&lt;p&gt;Please note that ipython may not be compatible with jedi release 0.18.0. Please revert to version 0.17.2 for auto-complete features to work (see &lt;a href=&#34;https://github.com/ipython/ipython/issues/12740&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;package-structure&#34;&gt;Package structure&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;paropy/
+  docs/
+  paropy/
+    __init__.py
+    data_utils.py
+    plot_utils.py
+    routines.py
+    scripts/
+      convective_power.py
+      diagnostics.py
+      diagnostic_parameters.py
+      filter_surface_field.py
+      latitude_vs_Br.py
+      latitude_vs_Br_with_CHAOS.py
+      meridional_snapshot.py
+      meridional_timeavg.py
+      rotation_rate.py
+      surface_snapshot.py
+      surface_timeavg.py
+    data/
+      CHAOS-7.7.mat
+  LICENSE.md
+  MANIFEST.in
+  README.md
+  setup.py
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;h3 id=&#34;diagnostics&#34;&gt;Diagnostics&lt;/h3&gt;
+&lt;p&gt;Example scripts can be found within the module &lt;code&gt;paropy&lt;/code&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code&gt;paropy/scripts/diagnostics.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set path to simulation data by setting&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;run_ID = &amp;lt;run_ID&amp;gt; # PARODY simulation tag
+directory = &amp;lt;path_to_data&amp;gt;
+saveDir = &amp;lt;path_to_savefigs&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code&gt;paropy/scripts/diagnostics.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Admire the output:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/paropy/master/docs/diag1_test.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/paropy/master/docs/diag2_test.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;meridional-snapshots&#34;&gt;Meridional snapshots&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code&gt;paropy/scripts/meridional_snapshot.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set path to simulation data and snapshot time by setting&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;run_ID, timestamp = &amp;#39;c-200a&amp;#39;, &amp;#39;16.84707134&amp;#39;
+directory = &amp;lt;path_to_data&amp;gt;
+saveDir = &amp;lt;path_to_savefigs&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code&gt;paropy/scripts/meridional_snapshot.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Admire the output:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/paropy/master/docs/merid_test.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;surface-snapshots&#34;&gt;Surface snapshots&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code&gt;paropy/scripts/surface_snapshot.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set path to simulation data and snapshot time by setting&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;run_ID, timestamp = &amp;#39;c-200a&amp;#39;, &amp;#39;16.84707134&amp;#39;
+directory = &amp;lt;path_to_data&amp;gt;
+saveDir = &amp;lt;path_to_savefigs&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code&gt;paropy/scripts/surface_snapshot.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Admire the output:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/paropy/master/docs/surface_test.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://pypi.org/project/paropy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyPI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://anaconda.org/jnywong/paropy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Anaconda Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;CHAOS-7.7 &lt;a href=&#34;http://www.spacecenter.dk/files/magnetic-models/CHAOS-7/CHAOS-7.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;(Finlay et al. 2020)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;authors&#34;&gt;Authors&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://jnywong.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jenny Wong&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;Institut de Physique du Globe de Paris - Institut des Sciences de la Terre&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;This project is licensed under the MIT License - see the &lt;a href=&#34;LICENSE.md&#34;&gt;LICENSE.md&lt;/a&gt; file for details&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgments&#34;&gt;Acknowledgments&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Del Duca Foundation&lt;/li&gt;
+&lt;li&gt;ERC SEIC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🎉&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slurpy</title>
+      <link>https://jnywong.github.io/project/slurpy/</link>
+      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://jnywong.github.io/project/slurpy/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/jnywong/nondim-slurry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://travis-ci.org/jnywong/nondim-slurry.svg?branch=master&#34; alt=&#34;Build Status&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;
+&lt;a href=&#34;https://doi.org/10.5281/zenodo.4446750&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.4446750.svg&#34; alt=&#34;DOI&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;slurpy&#34;&gt;slurpy&lt;/h1&gt;
+&lt;p&gt;Python module to solve the 1D, steady, spherical slurry system outlined in Wong et al.
+(2021) (see also Wong et al. 2018).&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;installing&#34;&gt;Installing&lt;/h3&gt;
+&lt;p&gt;Conda:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;conda install -c jnywong nondim-slurry
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pip:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip install nondim-slurry
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Git:&lt;/p&gt;
+&lt;p&gt;Find the latest version of the repository &lt;a href=&#34;https://github.com/jnywong/nondim-slurry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;package-structure&#34;&gt;Package structure&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;slurpy/
+  __init__.py
+  coreproperties.py
+  data_utils.py
+  getparameters.py
+  lookup.py
+  lookupdata/
+    denPREM.csv
+    gravPREM.csv
+    presPREM.csv
+    radAK135.csv
+    radPREM.csv
+    vpAK135.csv
+    vpPREM.csv
+  plot_utils.py
+  scripts/
+    parameter_search.py
+    seismic.py
+    sensitivity.py
+  slurry.py
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;example-scripts&#34;&gt;Example scripts&lt;/h2&gt;
+&lt;h3 id=&#34;parameter-search&#34;&gt;Parameter search&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code&gt;scripts/parameter_search.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enter some input parameters. For example, try:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# %% MODEL INPUTS
+# Show plots?
+plotOn=1 # show temp, xi, solid flux and density profiles
+
+# Input parameters
+layer_thicknesses=np.array([150e3]) # (m)
+thermal_conductivities=np.array([100.]) # (W m^-1 K^-1)
+icb_heatfluxes=np.array([3.4]) # (TW)
+csb_heatfluxes=np.array([7.4]) # (TW)
+
+h=0.05 # stepsize of heat flux through parameter space
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code&gt;parameter_search.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Admire the output:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/nondim-slurry/master/slurpy/docs/simple_output.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;sensitivity-study&#34;&gt;Sensitivity study&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open &lt;code&gt;scripts/sensitivity.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enter some input parameters. For example, try:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# %% MODEL INPUTS
+# Save plot?
+saveOn=0
+
+# Input parameters
+layer_thickness=150e3 # (m)
+thermal_conductivity=100. # (W m^-1 K^-1)
+icb_heatflux=2.5 # (TW)
+csb_heatflux=5.0 # (TW)
+h=0.05 # stepsize of heat flux through parameter space
+
+# Sensitivity study
+csb_temp = np.arange(4500.,6100.,100) # (K)
+csb_oxy = np.arange(2,12.5,0.5) # (mol.%)
+sed_con= np.array([1e-5,1e-4,1e-3,1e-2,1e-1]) # (kg s/m^3) pre-factor in sedimentation coefficient, b(phi)
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code&gt;sensitivity.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Admire the output:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/nondim-slurry/master/slurpy/docs/sensitivity_example.png&#34; alt=&#34;hello!&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://pypi.org/project/nondim-slurry/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyPI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://anaconda.org/jnywong/nondim-slurry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Anaconda Cloud&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;authors&#34;&gt;Authors&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://jnywong.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jenny Wong&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;University of Leeds - Institut de Physique du Globe de Paris - Institut des Sciences de la Terre&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://environment.leeds.ac.uk/see/staff/1225/dr-chris-davies&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Chris Davies&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;University of Leeds&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://eps.leeds.ac.uk/maths/staff/4042/professor-christopher-jones-&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Chris Jones&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;University of Leeds&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;This project is licensed under the MIT License - see the &lt;a href=&#34;LICENSE.md&#34;&gt;LICENSE.md&lt;/a&gt; file for details&lt;/p&gt;
+&lt;h2 id=&#34;acknowledgments&#34;&gt;Acknowledgments&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ERC SEIC&lt;/li&gt;
+&lt;li&gt;Del Duca Foundation&lt;/li&gt;
+&lt;li&gt;EPSRC Centre for Doctoral Training in Fluid Dynamics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🎉&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://jnywong.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
