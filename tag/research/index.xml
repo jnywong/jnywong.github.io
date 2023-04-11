@@ -7,7 +7,7 @@
     <description>research</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 08 Aug 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jnywong.github.io/media/icon_hu6373ebd6d80ed4ceb3a80f784b685de6_1111_512x512_fill_lanczos_center_3.png</url>
+      <url>https://jnywong.github.io/media/icon_hu2a63335d4f5c1cf1afb23062871f2bc8_36129_512x512_fill_lanczos_center_3.png</url>
       <title>research</title>
       <link>https://jnywong.github.io/tag/research/</link>
     </image>
@@ -48,18 +48,18 @@
 &lt;li&gt;&lt;a href=&#34;https://julialang.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Julia&lt;/a&gt; (version 1.6)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;package-structure&#34;&gt;Package structure&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;convect-jl
-    docs/
-    src/
-        convect_linear.jl
-        convect_nonlinear.jl
-        critical_ra.jl
-        data_utils.jl
-        postprocess.jl
-        routines.jl
-    LICENSE.md
-    README.md
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;convect-jl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    docs/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    src/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        convect_linear.jl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        convect_nonlinear.jl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        critical_ra.jl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        data_utils.jl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        postprocess.jl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        routines.jl
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    LICENSE.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    README.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
 &lt;h3 id=&#34;linear-convection&#34;&gt;Linear convection&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -69,18 +69,18 @@
 &lt;p&gt;Specify input parameters&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Inputs
-nz = 101 # no. of vertical gridpoints
-nn = 30 # no. of horizontal Fourier modes (excluding zeroth mode)
-a = 5 # L/D aspect ratio
-Ra = 2700 # Rayleigh number
-Pr = 0.5 # Prandtl number
-nt = 1e5 # no. of timesteps
-nout = 1e3 # output every nout timesteps
-zeroth = 0 # include zeroth order temperature in plot?
-initOn = 1
-saveDir = &amp;#34;/Users/wongj/Documents/convect-out/linear/2021-09-03&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Inputs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nz = 101 # no. of vertical gridpoints
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nn = 30 # no. of horizontal Fourier modes (excluding zeroth mode)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a = 5 # L/D aspect ratio
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ra = 2700 # Rayleigh number
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pr = 0.5 # Prandtl number
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nt = 1e5 # no. of timesteps
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nout = 1e3 # output every nout timesteps
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;zeroth = 0 # include zeroth order temperature in plot?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;initOn = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveDir = &amp;#34;/Users/wongj/Documents/convect-out/linear/2021-09-03&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;Run script from terminal using &lt;code&gt;julia &amp;lt;working directory&amp;gt;/convect-jl/src/convect_linear.jl&lt;/code&gt; (or from julia REPL using &lt;code&gt;include(&amp;quot;&amp;lt;working directory&amp;gt;/convect-jl/src/convect_linear.jl&amp;quot;)&lt;/code&gt; )&lt;/p&gt;
 &lt;/li&gt;
@@ -118,18 +118,18 @@ saveDir = &amp;#34;/Users/wongj/Documents/convect-out/linear/2021-09-03&amp;#34;
 &lt;p&gt;Specify input parameters&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Inputs
-nz = 101 # no. of vertical gridpoints
-nn = 50 # no. of Fourier modes (excluding zeroth mode)
-a = 3 # L/D aspect ratio
-Ra = 1e6 # Rayleigh number
-Pr = 0.5 # Prandtl number
-dt = 3e-6 # timestep size
-nt = 1e4 # no. of timesteps
-nout = 1e2 # save output every nout timesteps
-initOn = 1 # initialise run, otherwise load existing data
-saveDir = &amp;#34;/Users/wongj/Documents/convect-out/2021-09-03&amp;#34; # save directory
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Inputs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nz = 101 # no. of vertical gridpoints
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nn = 50 # no. of Fourier modes (excluding zeroth mode)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a = 3 # L/D aspect ratio
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ra = 1e6 # Rayleigh number
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pr = 0.5 # Prandtl number
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dt = 3e-6 # timestep size
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nt = 1e4 # no. of timesteps
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nout = 1e2 # save output every nout timesteps
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;initOn = 1 # initialise run, otherwise load existing data
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveDir = &amp;#34;/Users/wongj/Documents/convect-out/2021-09-03&amp;#34; # save directory
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;Run script from terminal using &lt;code&gt;julia &amp;lt;working directory&amp;gt;/convect-jl/src/convect_nonlinear.jl&lt;/code&gt; (or from julia REPL using &lt;code&gt;include(&amp;quot;&amp;lt;working directory&amp;gt;/convect-jl/src/convect_nonlinear.jl&amp;quot;)&lt;/code&gt; )&lt;/p&gt;
 &lt;/li&gt;
@@ -137,12 +137,12 @@ saveDir = &amp;#34;/Users/wongj/Documents/convect-out/2021-09-03&amp;#34; # save
 &lt;p&gt;Postprocess and visualise the data using &lt;code&gt;julia &amp;lt;working directory&amp;gt;/convect-jl/src/postprocess.jl&lt;/code&gt; (or from julia REPL using &lt;code&gt;include(&amp;quot;&amp;lt;working directory&amp;gt;/convect-jl/src/postprocess.jl&amp;quot;)&lt;/code&gt; ) with the following input parameters&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Inputs
-saveDir = &amp;#34;/Users/wongj/Documents/convect-out/2021-09-03&amp;#34; # save directory
-nStart = 1
-nEnd = 500
-zeroth= 1 # plot zeroth mode?
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Inputs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveDir = &amp;#34;/Users/wongj/Documents/convect-out/2021-09-03&amp;#34; # save directory
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nStart = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nEnd = 500
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;zeroth= 1 # plot zeroth mode?
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;Admire the output:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;
@@ -168,7 +168,7 @@ zeroth= 1 # plot zeroth mode?
 &lt;/p&gt;
 &lt;h2 id=&#34;authors&#34;&gt;Authors&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://jnywong.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jenny Wong&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;Institut des Sciences de la Terre&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jnywong.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jenny Wong&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;Institut des Sciences de la Terre&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 &lt;p&gt;This project is licensed under the MIT License - see the &lt;a href=&#34;LICENSE.md&#34;&gt;LICENSE.md&lt;/a&gt; file for details&lt;/p&gt;
@@ -234,40 +234,40 @@ zeroth= 1 # plot zeroth mode?
 &lt;/ul&gt;
 &lt;h3 id=&#34;installing&#34;&gt;Installing&lt;/h3&gt;
 &lt;p&gt;Conda:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;conda install -c jnywong paropy
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pip:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip install paropy
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Git:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda install -c jnywong paropy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pip:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install paropy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Git:&lt;/p&gt;
 &lt;p&gt;Find the Git repo &lt;a href=&#34;https://github.com/jnywong/nondim-slurry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&#34;warning-ipython-issue&#34;&gt;Warning: IPython issue&lt;/h4&gt;
 &lt;p&gt;Please note that ipython may not be compatible with jedi release 0.18.0. Please revert to version 0.17.2 for auto-complete features to work (see &lt;a href=&#34;https://github.com/ipython/ipython/issues/12740&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;h2 id=&#34;package-structure&#34;&gt;Package structure&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;paropy/
-  docs/
-  paropy/
-    __init__.py
-    data_utils.py
-    plot_utils.py
-    routines.py
-    scripts/
-      convective_power.py
-      diagnostics.py
-      diagnostic_parameters.py
-      filter_surface_field.py
-      latitude_vs_Br.py
-      latitude_vs_Br_with_CHAOS.py
-      meridional_snapshot.py
-      meridional_timeavg.py
-      rotation_rate.py
-      surface_snapshot.py
-      surface_timeavg.py
-    data/
-      CHAOS-7.7.mat
-  LICENSE.md
-  MANIFEST.in
-  README.md
-  setup.py
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;paropy/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  docs/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  paropy/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    __init__.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    data_utils.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    plot_utils.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    routines.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    scripts/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      convective_power.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      diagnostics.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      diagnostic_parameters.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      filter_surface_field.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      latitude_vs_Br.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      latitude_vs_Br_with_CHAOS.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      meridional_snapshot.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      meridional_timeavg.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      rotation_rate.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      surface_snapshot.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      surface_timeavg.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    data/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      CHAOS-7.7.mat
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  LICENSE.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  MANIFEST.in
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  setup.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
 &lt;h3 id=&#34;diagnostics&#34;&gt;Diagnostics&lt;/h3&gt;
 &lt;p&gt;Example scripts can be found within the module &lt;code&gt;paropy&lt;/code&gt;.&lt;/p&gt;
 &lt;ol&gt;
@@ -278,10 +278,10 @@ zeroth= 1 # plot zeroth mode?
 &lt;p&gt;Set path to simulation data by setting&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;run_ID = &amp;lt;run_ID&amp;gt; # PARODY simulation tag
-directory = &amp;lt;path_to_data&amp;gt;
-saveDir = &amp;lt;path_to_savefigs&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;run_ID = &amp;lt;run_ID&amp;gt; # PARODY simulation tag
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;directory = &amp;lt;path_to_data&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveDir = &amp;lt;path_to_savefigs&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;Run &lt;code&gt;paropy/scripts/diagnostics.py&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -340,10 +340,10 @@ saveDir = &amp;lt;path_to_savefigs&amp;gt;
 &lt;p&gt;Set path to simulation data and snapshot time by setting&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;run_ID, timestamp = &amp;#39;c-200a&amp;#39;, &amp;#39;16.84707134&amp;#39;
-directory = &amp;lt;path_to_data&amp;gt;
-saveDir = &amp;lt;path_to_savefigs&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;run_ID, timestamp = &amp;#39;c-200a&amp;#39;, &amp;#39;16.84707134&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;directory = &amp;lt;path_to_data&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveDir = &amp;lt;path_to_savefigs&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;Run &lt;code&gt;paropy/scripts/meridional_snapshot.py&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -381,10 +381,10 @@ saveDir = &amp;lt;path_to_savefigs&amp;gt;
 &lt;p&gt;Set path to simulation data and snapshot time by setting&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;run_ID, timestamp = &amp;#39;c-200a&amp;#39;, &amp;#39;16.84707134&amp;#39;
-directory = &amp;lt;path_to_data&amp;gt;
-saveDir = &amp;lt;path_to_savefigs&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;run_ID, timestamp = &amp;#39;c-200a&amp;#39;, &amp;#39;16.84707134&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;directory = &amp;lt;path_to_data&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveDir = &amp;lt;path_to_savefigs&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;Run &lt;code&gt;paropy/scripts/surface_snapshot.py&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -424,7 +424,7 @@ saveDir = &amp;lt;path_to_savefigs&amp;gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;authors&#34;&gt;Authors&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://jnywong.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jenny Wong&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;Institut de Physique du Globe de Paris - Institut des Sciences de la Terre&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jnywong.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jenny Wong&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;Institut de Physique du Globe de Paris - Institut des Sciences de la Terre&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 &lt;p&gt;This project is licensed under the MIT License - see the &lt;a href=&#34;LICENSE.md&#34;&gt;LICENSE.md&lt;/a&gt; file for details&lt;/p&gt;
@@ -494,33 +494,33 @@ saveDir = &amp;lt;path_to_savefigs&amp;gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;installing&#34;&gt;Installing&lt;/h3&gt;
 &lt;p&gt;Conda:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;conda install -c jnywong nondim-slurry
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pip:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pip install nondim-slurry
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Git:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda install -c jnywong nondim-slurry
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pip:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install nondim-slurry
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Git:&lt;/p&gt;
 &lt;p&gt;Find the latest version of the repository &lt;a href=&#34;https://github.com/jnywong/nondim-slurry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;package-structure&#34;&gt;Package structure&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;slurpy/
-  __init__.py
-  coreproperties.py
-  data_utils.py
-  getparameters.py
-  lookup.py
-  lookupdata/
-    denPREM.csv
-    gravPREM.csv
-    presPREM.csv
-    radAK135.csv
-    radPREM.csv
-    vpAK135.csv
-    vpPREM.csv
-  plot_utils.py
-  scripts/
-    parameter_search.py
-    seismic.py
-    sensitivity.py
-  slurry.py
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;example-scripts&#34;&gt;Example scripts&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slurpy/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  __init__.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  coreproperties.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  data_utils.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  getparameters.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  lookup.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  lookupdata/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    denPREM.csv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    gravPREM.csv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    presPREM.csv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    radAK135.csv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    radPREM.csv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    vpAK135.csv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    vpPREM.csv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  plot_utils.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  scripts/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    parameter_search.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    seismic.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    sensitivity.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  slurry.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;example-scripts&#34;&gt;Example scripts&lt;/h2&gt;
 &lt;h3 id=&#34;parameter-search&#34;&gt;Parameter search&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -530,18 +530,18 @@ saveDir = &amp;lt;path_to_savefigs&amp;gt;
 &lt;p&gt;Enter some input parameters. For example, try:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# %% MODEL INPUTS
-# Show plots?
-plotOn=1 # show temp, xi, solid flux and density profiles
-
-# Input parameters
-layer_thicknesses=np.array([150e3]) # (m)
-thermal_conductivities=np.array([100.]) # (W m^-1 K^-1)
-icb_heatfluxes=np.array([3.4]) # (TW)
-csb_heatfluxes=np.array([7.4]) # (TW)
-
-h=0.05 # stepsize of heat flux through parameter space
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# %% MODEL INPUTS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Show plots?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plotOn=1 # show temp, xi, solid flux and density profiles
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Input parameters
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;layer_thicknesses=np.array([150e3]) # (m)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;thermal_conductivities=np.array([100.]) # (W m^-1 K^-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;icb_heatfluxes=np.array([3.4]) # (TW)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;csb_heatfluxes=np.array([7.4]) # (TW)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;h=0.05 # stepsize of heat flux through parameter space
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;Run &lt;code&gt;parameter_search.py&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -579,22 +579,22 @@ h=0.05 # stepsize of heat flux through parameter space
 &lt;p&gt;Enter some input parameters. For example, try:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# %% MODEL INPUTS
-# Save plot?
-saveOn=0
-
-# Input parameters
-layer_thickness=150e3 # (m)
-thermal_conductivity=100. # (W m^-1 K^-1)
-icb_heatflux=2.5 # (TW)
-csb_heatflux=5.0 # (TW)
-h=0.05 # stepsize of heat flux through parameter space
-
-# Sensitivity study
-csb_temp = np.arange(4500.,6100.,100) # (K)
-csb_oxy = np.arange(2,12.5,0.5) # (mol.%)
-sed_con= np.array([1e-5,1e-4,1e-3,1e-2,1e-1]) # (kg s/m^3) pre-factor in sedimentation coefficient, b(phi)
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# %% MODEL INPUTS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Save plot?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveOn=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Input parameters
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;layer_thickness=150e3 # (m)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;thermal_conductivity=100. # (W m^-1 K^-1)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;icb_heatflux=2.5 # (TW)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;csb_heatflux=5.0 # (TW)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;h=0.05 # stepsize of heat flux through parameter space
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Sensitivity study
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;csb_temp = np.arange(4500.,6100.,100) # (K)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;csb_oxy = np.arange(2,12.5,0.5) # (mol.%)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed_con= np.array([1e-5,1e-4,1e-3,1e-2,1e-1]) # (kg s/m^3) pre-factor in sedimentation coefficient, b(phi)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;Run &lt;code&gt;sensitivity.py&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -630,7 +630,7 @@ sed_con= np.array([1e-5,1e-4,1e-3,1e-2,1e-1]) # (kg s/m^3) pre-factor in sedimen
 &lt;/ul&gt;
 &lt;h2 id=&#34;authors&#34;&gt;Authors&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://jnywong.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jenny Wong&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;University of Leeds - Institut de Physique du Globe de Paris - Institut des Sciences de la Terre&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jnywong.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jenny Wong&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;University of Leeds - Institut de Physique du Globe de Paris - Institut des Sciences de la Terre&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://environment.leeds.ac.uk/see/staff/1225/dr-chris-davies&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Chris Davies&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;University of Leeds&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://eps.leeds.ac.uk/maths/staff/4042/professor-christopher-jones-&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Chris Jones&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;University of Leeds&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
