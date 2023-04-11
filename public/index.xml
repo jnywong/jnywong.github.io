@@ -1,674 +1,413 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Jenny Wong</title>
-    <link>https://jnywong.github.io/</link>
-      <atom:link href="https://jnywong.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <description>Jenny Wong</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://jnywong.github.io/media/icon_hu2a63335d4f5c1cf1afb23062871f2bc8_36129_512x512_fill_lanczos_center_3.png</url>
-      <title>Jenny Wong</title>
-      <link>https://jnywong.github.io/</link>
-    </image>
-    
-    <item>
-      <title>Software Carpentries - Python</title>
-      <link>https://jnywong.github.io/project/carpentries-python/</link>
-      <pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://jnywong.github.io/project/carpentries-python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>convect-jl</title>
-      <link>https://jnywong.github.io/project/convect-jl/</link>
-      <pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://jnywong.github.io/project/convect-jl/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://opensource.org/licenses/MIT&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/License-MIT-yellow.svg&#34; alt=&#34;License: MIT&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src=&#34;https://raw.githubusercontent.com/jnywong/convect-jl/main/docs/figures/video.gif&#34; /&gt;
-&lt;/p&gt;
-&lt;p&gt;Welcome! Here is my Julia code to simulate 2D convection in a Cartesian box. Theory and methods used can be found in &lt;a href=&#34;https://press.princeton.edu/books/hardcover/9780691141725/introduction-to-modeling-convection-in-planets-and-stars&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction to Modeling Convection in Planets and Stars: Magnetic Field, Density Stratification, Rotation&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
-&lt;h3 id=&#34;pre-requisites&#34;&gt;Pre-requisites&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://julialang.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Julia&lt;/a&gt; (version 1.6)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;package-structure&#34;&gt;Package structure&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;convect-jl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    docs/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    src/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        convect_linear.jl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        convect_nonlinear.jl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        critical_ra.jl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        data_utils.jl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        postprocess.jl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        routines.jl
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    LICENSE.md
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    README.md
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-&lt;h3 id=&#34;linear-convection&#34;&gt;Linear convection&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Open &lt;code&gt;src/convect_linear.jl&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Specify input parameters&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Inputs
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nz = 101 # no. of vertical gridpoints
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nn = 30 # no. of horizontal Fourier modes (excluding zeroth mode)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a = 5 # L/D aspect ratio
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ra = 2700 # Rayleigh number
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pr = 0.5 # Prandtl number
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nt = 1e5 # no. of timesteps
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nout = 1e3 # output every nout timesteps
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;zeroth = 0 # include zeroth order temperature in plot?
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;initOn = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveDir = &amp;#34;/Users/wongj/Documents/convect-out/linear/2021-09-03&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;Run script from terminal using &lt;code&gt;julia &amp;lt;working directory&amp;gt;/convect-jl/src/convect_linear.jl&lt;/code&gt; (or from julia REPL using &lt;code&gt;include(&amp;quot;&amp;lt;working directory&amp;gt;/convect-jl/src/convect_linear.jl&amp;quot;)&lt;/code&gt; )&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Admire the output:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;docs/figures/linear.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id=&#34;nonlinear-convection&#34;&gt;Nonlinear convection&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Open &lt;code&gt;src/convect_nonlinear.jl&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Specify input parameters&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Inputs
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nz = 101 # no. of vertical gridpoints
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nn = 50 # no. of Fourier modes (excluding zeroth mode)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a = 3 # L/D aspect ratio
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Ra = 1e6 # Rayleigh number
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pr = 0.5 # Prandtl number
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dt = 3e-6 # timestep size
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nt = 1e4 # no. of timesteps
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nout = 1e2 # save output every nout timesteps
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;initOn = 1 # initialise run, otherwise load existing data
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveDir = &amp;#34;/Users/wongj/Documents/convect-out/2021-09-03&amp;#34; # save directory
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;Run script from terminal using &lt;code&gt;julia &amp;lt;working directory&amp;gt;/convect-jl/src/convect_nonlinear.jl&lt;/code&gt; (or from julia REPL using &lt;code&gt;include(&amp;quot;&amp;lt;working directory&amp;gt;/convect-jl/src/convect_nonlinear.jl&amp;quot;)&lt;/code&gt; )&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Postprocess and visualise the data using &lt;code&gt;julia &amp;lt;working directory&amp;gt;/convect-jl/src/postprocess.jl&lt;/code&gt; (or from julia REPL using &lt;code&gt;include(&amp;quot;&amp;lt;working directory&amp;gt;/convect-jl/src/postprocess.jl&amp;quot;)&lt;/code&gt; ) with the following input parameters&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Inputs
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveDir = &amp;#34;/Users/wongj/Documents/convect-out/2021-09-03&amp;#34; # save directory
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nStart = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nEnd = 500
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;zeroth= 1 # plot zeroth mode?
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;Admire the output:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/convect-jl/main/docs/figures/video.gif&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;authors&#34;&gt;Authors&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://jnywong.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jenny Wong&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;Institut des Sciences de la Terre&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;This project is licensed under the MIT License - see the &lt;a href=&#34;LICENSE.md&#34;&gt;LICENSE.md&lt;/a&gt; file for details&lt;/p&gt;
-&lt;p&gt;🎉&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>paropy</title>
-      <link>https://jnywong.github.io/project/paropy/</link>
-      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://jnywong.github.io/project/paropy/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://badge.fury.io/py/paropy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://badge.fury.io/py/paropy.svg&#34; alt=&#34;PyPI version&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/a&gt;
-&lt;a href=&#34;https://opensource.org/licenses/MIT&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://img.shields.io/badge/License-MIT-yellow.svg&#34; alt=&#34;License: MIT&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;paropy&#34;&gt;paropy&lt;/h1&gt;
-&lt;p&gt;Welcome! Here is my Python package to process data from PARODY-JA4.3 dynamo simulations with a stably-stratified F-layer at the base of the outer core.&lt;/p&gt;
-&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
-&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://bitbucket.org/nschaeff/shtns/src/master/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SHTns&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ancklo/ChaosMagPy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ChaosMagPy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;installing&#34;&gt;Installing&lt;/h3&gt;
-&lt;p&gt;Conda:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda install -c jnywong paropy
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pip:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install paropy
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Git:&lt;/p&gt;
-&lt;p&gt;Find the Git repo &lt;a href=&#34;https://github.com/jnywong/nondim-slurry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;warning-ipython-issue&#34;&gt;Warning: IPython issue&lt;/h4&gt;
-&lt;p&gt;Please note that ipython may not be compatible with jedi release 0.18.0. Please revert to version 0.17.2 for auto-complete features to work (see &lt;a href=&#34;https://github.com/ipython/ipython/issues/12740&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
-&lt;h2 id=&#34;package-structure&#34;&gt;Package structure&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;paropy/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  docs/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  paropy/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    __init__.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    data_utils.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    plot_utils.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    routines.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    scripts/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      convective_power.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      diagnostics.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      diagnostic_parameters.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      filter_surface_field.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      latitude_vs_Br.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      latitude_vs_Br_with_CHAOS.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      meridional_snapshot.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      meridional_timeavg.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      rotation_rate.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      surface_snapshot.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      surface_timeavg.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    data/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      CHAOS-7.7.mat
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  LICENSE.md
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  MANIFEST.in
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  README.md
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  setup.py
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
-&lt;h3 id=&#34;diagnostics&#34;&gt;Diagnostics&lt;/h3&gt;
-&lt;p&gt;Example scripts can be found within the module &lt;code&gt;paropy&lt;/code&gt;.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Open &lt;code&gt;paropy/scripts/diagnostics.py&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Set path to simulation data by setting&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;run_ID = &amp;lt;run_ID&amp;gt; # PARODY simulation tag
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;directory = &amp;lt;path_to_data&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveDir = &amp;lt;path_to_savefigs&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;Run &lt;code&gt;paropy/scripts/diagnostics.py&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Admire the output:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/paropy/master/docs/diag1_test.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/paropy/master/docs/diag2_test.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id=&#34;meridional-snapshots&#34;&gt;Meridional snapshots&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Open &lt;code&gt;paropy/scripts/meridional_snapshot.py&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Set path to simulation data and snapshot time by setting&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;run_ID, timestamp = &amp;#39;c-200a&amp;#39;, &amp;#39;16.84707134&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;directory = &amp;lt;path_to_data&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveDir = &amp;lt;path_to_savefigs&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;Run &lt;code&gt;paropy/scripts/meridional_snapshot.py&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Admire the output:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/paropy/master/docs/merid_test.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id=&#34;surface-snapshots&#34;&gt;Surface snapshots&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Open &lt;code&gt;paropy/scripts/surface_snapshot.py&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Set path to simulation data and snapshot time by setting&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;run_ID, timestamp = &amp;#39;c-200a&amp;#39;, &amp;#39;16.84707134&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;directory = &amp;lt;path_to_data&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveDir = &amp;lt;path_to_savefigs&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;Run &lt;code&gt;paropy/scripts/surface_snapshot.py&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Admire the output:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/paropy/master/docs/surface_test.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://pypi.org/project/paropy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyPI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://anaconda.org/jnywong/paropy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Anaconda Cloud&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;CHAOS-7.7 &lt;a href=&#34;http://www.spacecenter.dk/files/magnetic-models/CHAOS-7/CHAOS-7.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;(Finlay et al. 2020)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;authors&#34;&gt;Authors&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://jnywong.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jenny Wong&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;Institut de Physique du Globe de Paris - Institut des Sciences de la Terre&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;This project is licensed under the MIT License - see the &lt;a href=&#34;LICENSE.md&#34;&gt;LICENSE.md&lt;/a&gt; file for details&lt;/p&gt;
-&lt;h2 id=&#34;acknowledgments&#34;&gt;Acknowledgments&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Del Duca Foundation&lt;/li&gt;
-&lt;li&gt;ERC SEIC&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;🎉&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>slurpy</title>
-      <link>https://jnywong.github.io/project/slurpy/</link>
-      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://jnywong.github.io/project/slurpy/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/jnywong/nondim-slurry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://travis-ci.org/jnywong/nondim-slurry.svg?branch=master&#34; alt=&#34;Build Status&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/a&gt;
-&lt;a href=&#34;https://doi.org/10.5281/zenodo.4446750&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://zenodo.org/badge/DOI/10.5281/zenodo.4446750.svg&#34; alt=&#34;DOI&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;slurpy&#34;&gt;slurpy&lt;/h1&gt;
-&lt;p&gt;Python module to solve the 1D, steady, spherical slurry system outlined in Wong et al.
-(2021) (see also Wong et al. 2018).&lt;/p&gt;
-&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
-&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.python.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;installing&#34;&gt;Installing&lt;/h3&gt;
-&lt;p&gt;Conda:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda install -c jnywong nondim-slurry
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pip:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install nondim-slurry
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Git:&lt;/p&gt;
-&lt;p&gt;Find the latest version of the repository &lt;a href=&#34;https://github.com/jnywong/nondim-slurry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;package-structure&#34;&gt;Package structure&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slurpy/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  __init__.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  coreproperties.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  data_utils.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  getparameters.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  lookup.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  lookupdata/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    denPREM.csv
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    gravPREM.csv
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    presPREM.csv
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    radAK135.csv
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    radPREM.csv
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    vpAK135.csv
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    vpPREM.csv
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  plot_utils.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  scripts/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    parameter_search.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    seismic.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    sensitivity.py
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  slurry.py
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;example-scripts&#34;&gt;Example scripts&lt;/h2&gt;
-&lt;h3 id=&#34;parameter-search&#34;&gt;Parameter search&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Open &lt;code&gt;scripts/parameter_search.py&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Enter some input parameters. For example, try:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# %% MODEL INPUTS
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Show plots?
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;plotOn=1 # show temp, xi, solid flux and density profiles
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Input parameters
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;layer_thicknesses=np.array([150e3]) # (m)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;thermal_conductivities=np.array([100.]) # (W m^-1 K^-1)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;icb_heatfluxes=np.array([3.4]) # (TW)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;csb_heatfluxes=np.array([7.4]) # (TW)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;h=0.05 # stepsize of heat flux through parameter space
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;Run &lt;code&gt;parameter_search.py&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Admire the output:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/nondim-slurry/master/slurpy/docs/simple_output.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id=&#34;sensitivity-study&#34;&gt;Sensitivity study&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Open &lt;code&gt;scripts/sensitivity.py&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Enter some input parameters. For example, try:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# %% MODEL INPUTS
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Save plot?
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;saveOn=0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Input parameters
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;layer_thickness=150e3 # (m)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;thermal_conductivity=100. # (W m^-1 K^-1)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;icb_heatflux=2.5 # (TW)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;csb_heatflux=5.0 # (TW)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;h=0.05 # stepsize of heat flux through parameter space
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Sensitivity study
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;csb_temp = np.arange(4500.,6100.,100) # (K)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;csb_oxy = np.arange(2,12.5,0.5) # (mol.%)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed_con= np.array([1e-5,1e-4,1e-3,1e-2,1e-1]) # (kg s/m^3) pre-factor in sedimentation coefficient, b(phi)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;Run &lt;code&gt;sensitivity.py&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Admire the output:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/jnywong/nondim-slurry/master/slurpy/docs/sensitivity_example.png&#34; alt=&#34;hello!&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://pypi.org/project/nondim-slurry/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyPI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://anaconda.org/jnywong/nondim-slurry&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Anaconda Cloud&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;authors&#34;&gt;Authors&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://jnywong.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jenny Wong&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;University of Leeds - Institut de Physique du Globe de Paris - Institut des Sciences de la Terre&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://environment.leeds.ac.uk/see/staff/1225/dr-chris-davies&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Chris Davies&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;University of Leeds&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://eps.leeds.ac.uk/maths/staff/4042/professor-christopher-jones-&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Chris Jones&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;University of Leeds&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;This project is licensed under the MIT License - see the &lt;a href=&#34;LICENSE.md&#34;&gt;LICENSE.md&lt;/a&gt; file for details&lt;/p&gt;
-&lt;h2 id=&#34;acknowledgments&#34;&gt;Acknowledgments&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;ERC SEIC&lt;/li&gt;
-&lt;li&gt;Del Duca Foundation&lt;/li&gt;
-&lt;li&gt;EPSRC Centre for Doctoral Training in Fluid Dynamics&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;🎉&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnywong.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jnywong.github.io/about/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://jnywong.github.io/admin/config.yml</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jnywong.github.io/admin/config.yml</guid>
-      <description></description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jenny Wong</title><link>https://jnywong.github.io/</link><atom:link href="https://jnywong.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Jenny Wong</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate><image><url>https://jnywong.github.io/media/icon_hu2a63335d4f5c1cf1afb23062871f2bc8_36129_512x512_fill_lanczos_center_3.png</url><title>Jenny Wong</title><link>https://jnywong.github.io/</link></image><item><title>Software Carpentries - Python</title><link>https://jnywong.github.io/project/carpentries-python/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><guid>https://jnywong.github.io/project/carpentries-python/</guid><description/></item><item><title>convect-jl</title><link>https://jnywong.github.io/project/convect-jl/</link><pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate><guid>https://jnywong.github.io/project/convect-jl/</guid><description>&lt;p>&lt;a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/a>&lt;/p>
+&lt;p align="center">
+&lt;img src="https://raw.githubusercontent.com/jnywong/convect-jl/main/docs/figures/video.gif" />
+&lt;/p>
+&lt;p>Welcome! Here is my Julia code to simulate 2D convection in a Cartesian box. Theory and methods used can be found in &lt;a href="https://press.princeton.edu/books/hardcover/9780691141725/introduction-to-modeling-convection-in-planets-and-stars" target="_blank" rel="noopener">Introduction to Modeling Convection in Planets and Stars: Magnetic Field, Density Stratification, Rotation&lt;/a>.&lt;/p>
+&lt;h2 id="getting-started">Getting Started&lt;/h2>
+&lt;h3 id="pre-requisites">Pre-requisites&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://julialang.org/" target="_blank" rel="noopener">Julia&lt;/a> (version 1.6)&lt;/li>
+&lt;/ul>
+&lt;h2 id="package-structure">Package structure&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">convect-jl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docs/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> src/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> convect_linear.jl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> convect_nonlinear.jl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> critical_ra.jl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> data_utils.jl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> postprocess.jl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> routines.jl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> LICENSE.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> README.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
+&lt;h3 id="linear-convection">Linear convection&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Open &lt;code>src/convect_linear.jl&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Specify input parameters&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># Inputs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nz = 101 # no. of vertical gridpoints
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nn = 30 # no. of horizontal Fourier modes (excluding zeroth mode)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a = 5 # L/D aspect ratio
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Ra = 2700 # Rayleigh number
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Pr = 0.5 # Prandtl number
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nt = 1e5 # no. of timesteps
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nout = 1e3 # output every nout timesteps
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zeroth = 0 # include zeroth order temperature in plot?
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">initOn = 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">saveDir = &amp;#34;/Users/wongj/Documents/convect-out/linear/2021-09-03&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>
+&lt;p>Run script from terminal using &lt;code>julia &amp;lt;working directory&amp;gt;/convect-jl/src/convect_linear.jl&lt;/code> (or from julia REPL using &lt;code>include(&amp;quot;&amp;lt;working directory&amp;gt;/convect-jl/src/convect_linear.jl&amp;quot;)&lt;/code> )&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Admire the output:&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="docs/figures/linear.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="nonlinear-convection">Nonlinear convection&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Open &lt;code>src/convect_nonlinear.jl&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Specify input parameters&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># Inputs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nz = 101 # no. of vertical gridpoints
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nn = 50 # no. of Fourier modes (excluding zeroth mode)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a = 3 # L/D aspect ratio
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Ra = 1e6 # Rayleigh number
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Pr = 0.5 # Prandtl number
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dt = 3e-6 # timestep size
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nt = 1e4 # no. of timesteps
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nout = 1e2 # save output every nout timesteps
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">initOn = 1 # initialise run, otherwise load existing data
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">saveDir = &amp;#34;/Users/wongj/Documents/convect-out/2021-09-03&amp;#34; # save directory
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>
+&lt;p>Run script from terminal using &lt;code>julia &amp;lt;working directory&amp;gt;/convect-jl/src/convect_nonlinear.jl&lt;/code> (or from julia REPL using &lt;code>include(&amp;quot;&amp;lt;working directory&amp;gt;/convect-jl/src/convect_nonlinear.jl&amp;quot;)&lt;/code> )&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Postprocess and visualise the data using &lt;code>julia &amp;lt;working directory&amp;gt;/convect-jl/src/postprocess.jl&lt;/code> (or from julia REPL using &lt;code>include(&amp;quot;&amp;lt;working directory&amp;gt;/convect-jl/src/postprocess.jl&amp;quot;)&lt;/code> ) with the following input parameters&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># Inputs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">saveDir = &amp;#34;/Users/wongj/Documents/convect-out/2021-09-03&amp;#34; # save directory
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nStart = 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nEnd = 500
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zeroth= 1 # plot zeroth mode?
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
+&lt;li>Admire the output:&lt;/li>
+&lt;/ol>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/jnywong/convect-jl/main/docs/figures/video.gif" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="authors">Authors&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://jnywong.github.io/" target="_blank" rel="noopener">&lt;strong>Jenny Wong&lt;/strong>&lt;/a> - &lt;em>Institut des Sciences de la Terre&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;h2 id="license">License&lt;/h2>
+&lt;p>This project is licensed under the MIT License - see the &lt;a href="LICENSE.md">LICENSE.md&lt;/a> file for details&lt;/p>
+&lt;p>🎉&lt;/p></description></item><item><title>paropy</title><link>https://jnywong.github.io/project/paropy/</link><pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate><guid>https://jnywong.github.io/project/paropy/</guid><description>&lt;p>&lt;a href="https://badge.fury.io/py/paropy" target="_blank" rel="noopener">
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://badge.fury.io/py/paropy.svg" alt="PyPI version" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/a>
+&lt;a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/a>&lt;/p>
+&lt;h1 id="paropy">paropy&lt;/h1>
+&lt;p>Welcome! Here is my Python package to process data from PARODY-JA4.3 dynamo simulations with a stably-stratified F-layer at the base of the outer core.&lt;/p>
+&lt;h2 id="getting-started">Getting Started&lt;/h2>
+&lt;h3 id="prerequisites">Prerequisites&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://www.python.org/" target="_blank" rel="noopener">Python3&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://bitbucket.org/nschaeff/shtns/src/master/" target="_blank" rel="noopener">SHTns&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/ancklo/ChaosMagPy" target="_blank" rel="noopener">ChaosMagPy&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="installing">Installing&lt;/h3>
+&lt;p>Conda:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">conda install -c jnywong paropy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Pip:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pip install paropy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Git:&lt;/p>
+&lt;p>Find the Git repo &lt;a href="https://github.com/jnywong/nondim-slurry" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;h4 id="warning-ipython-issue">Warning: IPython issue&lt;/h4>
+&lt;p>Please note that ipython may not be compatible with jedi release 0.18.0. Please revert to version 0.17.2 for auto-complete features to work (see &lt;a href="https://github.com/ipython/ipython/issues/12740" target="_blank" rel="noopener">here&lt;/a>).&lt;/p>
+&lt;h2 id="package-structure">Package structure&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">paropy/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docs/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> paropy/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> __init__.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> data_utils.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> plot_utils.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> routines.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> scripts/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> convective_power.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> diagnostics.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> diagnostic_parameters.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> filter_surface_field.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> latitude_vs_Br.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> latitude_vs_Br_with_CHAOS.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> meridional_snapshot.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> meridional_timeavg.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> rotation_rate.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> surface_snapshot.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> surface_timeavg.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> data/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> CHAOS-7.7.mat
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> LICENSE.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> MANIFEST.in
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> README.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> setup.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
+&lt;h3 id="diagnostics">Diagnostics&lt;/h3>
+&lt;p>Example scripts can be found within the module &lt;code>paropy&lt;/code>.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Open &lt;code>paropy/scripts/diagnostics.py&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Set path to simulation data by setting&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">run_ID = &amp;lt;run_ID&amp;gt; # PARODY simulation tag
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">directory = &amp;lt;path_to_data&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">saveDir = &amp;lt;path_to_savefigs&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>
+&lt;p>Run &lt;code>paropy/scripts/diagnostics.py&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Admire the output:&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/jnywong/paropy/master/docs/diag1_test.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/jnywong/paropy/master/docs/diag2_test.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="meridional-snapshots">Meridional snapshots&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Open &lt;code>paropy/scripts/meridional_snapshot.py&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Set path to simulation data and snapshot time by setting&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">run_ID, timestamp = &amp;#39;c-200a&amp;#39;, &amp;#39;16.84707134&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">directory = &amp;lt;path_to_data&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">saveDir = &amp;lt;path_to_savefigs&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>
+&lt;p>Run &lt;code>paropy/scripts/meridional_snapshot.py&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Admire the output:&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/jnywong/paropy/master/docs/merid_test.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="surface-snapshots">Surface snapshots&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Open &lt;code>paropy/scripts/surface_snapshot.py&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Set path to simulation data and snapshot time by setting&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">run_ID, timestamp = &amp;#39;c-200a&amp;#39;, &amp;#39;16.84707134&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">directory = &amp;lt;path_to_data&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">saveDir = &amp;lt;path_to_savefigs&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>
+&lt;p>Run &lt;code>paropy/scripts/surface_snapshot.py&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Admire the output:&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/jnywong/paropy/master/docs/surface_test.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="links">Links&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://pypi.org/project/paropy/" target="_blank" rel="noopener">PyPI&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://anaconda.org/jnywong/paropy" target="_blank" rel="noopener">Anaconda Cloud&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="data">Data&lt;/h2>
+&lt;ul>
+&lt;li>CHAOS-7.7 &lt;a href="http://www.spacecenter.dk/files/magnetic-models/CHAOS-7/CHAOS-7.pdf" target="_blank" rel="noopener">(Finlay et al. 2020)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="authors">Authors&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://jnywong.github.io/" target="_blank" rel="noopener">&lt;strong>Jenny Wong&lt;/strong>&lt;/a> - &lt;em>Institut de Physique du Globe de Paris - Institut des Sciences de la Terre&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;h2 id="license">License&lt;/h2>
+&lt;p>This project is licensed under the MIT License - see the &lt;a href="LICENSE.md">LICENSE.md&lt;/a> file for details&lt;/p>
+&lt;h2 id="acknowledgments">Acknowledgments&lt;/h2>
+&lt;ul>
+&lt;li>Del Duca Foundation&lt;/li>
+&lt;li>ERC SEIC&lt;/li>
+&lt;/ul>
+&lt;p>🎉&lt;/p></description></item><item><title>slurpy</title><link>https://jnywong.github.io/project/slurpy/</link><pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate><guid>https://jnywong.github.io/project/slurpy/</guid><description>&lt;p>&lt;a href="https://travis-ci.org/jnywong/nondim-slurry" target="_blank" rel="noopener">
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://travis-ci.org/jnywong/nondim-slurry.svg?branch=master" alt="Build Status" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/a>
+&lt;a href="https://doi.org/10.5281/zenodo.4446750" target="_blank" rel="noopener">
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4446750.svg" alt="DOI" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/a>&lt;/p>
+&lt;h1 id="slurpy">slurpy&lt;/h1>
+&lt;p>Python module to solve the 1D, steady, spherical slurry system outlined in Wong et al.
+(2021) (see also Wong et al. 2018).&lt;/p>
+&lt;h2 id="getting-started">Getting Started&lt;/h2>
+&lt;h3 id="prerequisites">Prerequisites&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://www.python.org/" target="_blank" rel="noopener">Python&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="installing">Installing&lt;/h3>
+&lt;p>Conda:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">conda install -c jnywong nondim-slurry
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Pip:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pip install nondim-slurry
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Git:&lt;/p>
+&lt;p>Find the latest version of the repository &lt;a href="https://github.com/jnywong/nondim-slurry" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;h2 id="package-structure">Package structure&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">slurpy/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> __init__.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> coreproperties.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> data_utils.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> getparameters.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> lookup.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> lookupdata/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> denPREM.csv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> gravPREM.csv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> presPREM.csv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> radAK135.csv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> radPREM.csv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vpAK135.csv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vpPREM.csv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> plot_utils.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> scripts/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> parameter_search.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> seismic.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sensitivity.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> slurry.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="example-scripts">Example scripts&lt;/h2>
+&lt;h3 id="parameter-search">Parameter search&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Open &lt;code>scripts/parameter_search.py&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Enter some input parameters. For example, try:&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># %% MODEL INPUTS
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Show plots?
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">plotOn=1 # show temp, xi, solid flux and density profiles
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Input parameters
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">layer_thicknesses=np.array([150e3]) # (m)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">thermal_conductivities=np.array([100.]) # (W m^-1 K^-1)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">icb_heatfluxes=np.array([3.4]) # (TW)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">csb_heatfluxes=np.array([7.4]) # (TW)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">h=0.05 # stepsize of heat flux through parameter space
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>
+&lt;p>Run &lt;code>parameter_search.py&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Admire the output:&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/jnywong/nondim-slurry/master/slurpy/docs/simple_output.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="sensitivity-study">Sensitivity study&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Open &lt;code>scripts/sensitivity.py&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Enter some input parameters. For example, try:&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># %% MODEL INPUTS
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Save plot?
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">saveOn=0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Input parameters
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">layer_thickness=150e3 # (m)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">thermal_conductivity=100. # (W m^-1 K^-1)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">icb_heatflux=2.5 # (TW)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">csb_heatflux=5.0 # (TW)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">h=0.05 # stepsize of heat flux through parameter space
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Sensitivity study
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">csb_temp = np.arange(4500.,6100.,100) # (K)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">csb_oxy = np.arange(2,12.5,0.5) # (mol.%)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed_con= np.array([1e-5,1e-4,1e-3,1e-2,1e-1]) # (kg s/m^3) pre-factor in sedimentation coefficient, b(phi)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>
+&lt;p>Run &lt;code>sensitivity.py&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Admire the output:&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/jnywong/nondim-slurry/master/slurpy/docs/sensitivity_example.png" alt="hello!" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="links">Links&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://pypi.org/project/nondim-slurry/" target="_blank" rel="noopener">PyPI&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://anaconda.org/jnywong/nondim-slurry" target="_blank" rel="noopener">Anaconda Cloud&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="authors">Authors&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://jnywong.github.io/" target="_blank" rel="noopener">&lt;strong>Jenny Wong&lt;/strong>&lt;/a> - &lt;em>University of Leeds - Institut de Physique du Globe de Paris - Institut des Sciences de la Terre&lt;/em>&lt;/li>
+&lt;li>&lt;a href="https://environment.leeds.ac.uk/see/staff/1225/dr-chris-davies" target="_blank" rel="noopener">&lt;strong>Chris Davies&lt;/strong>&lt;/a> - &lt;em>University of Leeds&lt;/em>&lt;/li>
+&lt;li>&lt;a href="https://eps.leeds.ac.uk/maths/staff/4042/professor-christopher-jones-" target="_blank" rel="noopener">&lt;strong>Chris Jones&lt;/strong>&lt;/a> - &lt;em>University of Leeds&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;h2 id="license">License&lt;/h2>
+&lt;p>This project is licensed under the MIT License - see the &lt;a href="LICENSE.md">LICENSE.md&lt;/a> file for details&lt;/p>
+&lt;h2 id="acknowledgments">Acknowledgments&lt;/h2>
+&lt;ul>
+&lt;li>ERC SEIC&lt;/li>
+&lt;li>Del Duca Foundation&lt;/li>
+&lt;li>EPSRC Centre for Doctoral Training in Fluid Dynamics&lt;/li>
+&lt;/ul>
+&lt;p>🎉&lt;/p></description></item><item><title/><link>https://jnywong.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jnywong.github.io/about/</guid><description/></item><item><title/><link>https://jnywong.github.io/admin/config.yml</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jnywong.github.io/admin/config.yml</guid><description/></item></channel></rss>
