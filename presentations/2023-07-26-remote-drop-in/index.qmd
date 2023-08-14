@@ -1,0 +1,15 @@
+---
+title:  VSCode for Remote Development
+description: Baskerville Remote Drop-In topic demonstrating VSCode for remote development.
+event: Baskerville Remote Drop-In
+location: University of Birmingham, UK (remote)
+date: "2023-07-26"
+date-modified: "2023-07-26"
+image: featured.png
+image-alt: VSCode Remote Development slide cover
+categories:
+  - baskerville
+  - vscode
+---
+
+<a href="vscode.html" target="_blank">These are the slides</a> for this presentation.
