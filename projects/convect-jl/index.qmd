@@ -1,43 +1,22 @@
 ---
-title: convect-jl
-summary: An open source Julia code to simulate 2D convection in a Cartesian box. 
-tags:
-  - research
-date: "2021-08-08T00:00:00Z"
-
-# Optional external URL for project (replaces project detail page).
-external_link: ""
-
-image:
-  caption: 
-  focal_point: Smart
-  preview_only: true
-  alt_text: 2D contour plot of velocity field in a non-linear convecting system
-
-links:
-- icon: github
-  icon_pack: fab
-  name: GitHub
-  url: https://github.com/jnywong/convect-jl
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
-
-# Slides (optional).
-#   Associate this project with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
-slides: ""
+title: "convect-jl"
+description:  "An open source Julia code to simulate 2D convection in a Cartesian box. "
+image: featured.png
+image-alt: 2D contour plot of velocity field in a non-linear convecting system.
+categories:
+  - non-linear convection
+  - fluid dynamics
+  - julia
+about:
+  template: marquee
+  image: featured.png
+  image-width: 90%
+from: markdown+emoji
 ---
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/jnywong/convect-jl/main/docs/figures/video.gif" />
-</p>
 
 Welcome! Here is my Julia code to simulate 2D convection in a Cartesian box. Theory and methods used can be found in [Introduction to Modeling Convection in Planets and Stars: Magnetic Field, Density Stratification, Rotation](https://press.princeton.edu/books/hardcover/9780691141725/introduction-to-modeling-convection-in-planets-and-stars). 
+
+[![](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Getting Started
 
@@ -84,7 +63,7 @@ saveDir = "/Users/wongj/Documents/convect-out/linear/2021-09-03"
 
 4. Admire the output:
 
-![](docs/figures/linear.png)
+![](https://github.com/jnywong/convect-jl/blob/main/docs/figures/linear.png?raw=true)
 
 ### Nonlinear convection
 
@@ -119,7 +98,7 @@ zeroth= 1 # plot zeroth mode?
 
 5. Admire the output:
 
-![](https://raw.githubusercontent.com/jnywong/convect-jl/main/docs/figures/video.gif)
+![](https://github.com/jnywong/convect-jl/blob/main/docs/figures/video.gif?raw=true)
 
 ## Authors
 
@@ -128,6 +107,6 @@ zeroth= 1 # plot zeroth mode?
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/jnywong/convect-jl/blob/main/LICENSE.md) file for details
 
 :tada:
