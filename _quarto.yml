@@ -26,6 +26,10 @@ website:
         text: About
       - href: presentations.qmd
         text: Presentations
+      - href: projects.qmd
+        text: Projects        
+      - href: "https://jnywong.github.io/2022-10-31-birmingham/"
+        text: Software Carpentries
   page-footer:
     left: |
       {{< fa regular copyright >}} Jenny Wong, 2023<br>

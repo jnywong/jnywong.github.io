@@ -1,6 +1,6 @@
 ---
 title: "slurpy"
-description:  "An open source python package to solve the 1D, steady, spherical slurry system outlined in *[Wong et al. (2021)](https://academic.oup.com/gji/article-pdf/214/3/2236/36134435/ggy245.pdf)* (see also *[Wong et al. 2018](https://www.sciencedirect.com/science/article/am/pii/S0012821X21000509)*)."
+description:  "An open source python package to solve the 1D, steady, spherical slurry system outlined in [Wong et al. (2021)](https://www.sciencedirect.com/science/article/am/pii/S0012821X21000509) (see also [Wong et al. 2018](https://academic.oup.com/gji/article-pdf/214/3/2236/36134435/ggy245.pdf))."
 image: featured.png
 image-alt: Figure containing 2D plots of temperature, composition, solid flux and density as a function of depth.
 categories:

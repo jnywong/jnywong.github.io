@@ -39,4 +39,4 @@ I collaborate with research teams across the university on coding projects and p
 
 I also engage with high performance computing (HPC) user communities to lower the barrier to access to supercomputing through delivering training and workshops, and I am a certified [NVIDIA University Ambassador](https://www.nvidia.com/en-gb/training/) and [Carpentries Instructor](https://carpentries.org/).
 
-This website contains a [short bio](about.qmd) about me, as well as a collection of presentations and content related to my research projects and training.
+This website contains a [short bio](about.qmd) about me, as well as a collection of presentations and content related to my research projects and training  materials.
