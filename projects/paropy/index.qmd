@@ -1,40 +1,21 @@
 ---
-title: paropy
-summary: An open source python package to process data from PARODY-JA4.3 dynamo simulations with a stably-stratified F-layer at the base of the outer core. 
-tags:
+title: "paropy"
+description:  "An open source python package to process data from PARODY-JA4.3 dynamo simulations with a stably-stratified F-layer at the base of the outer core. "
+image: featured.png
+image-alt: Figure containing 3D volume render of azimuthal flow in the Earth's liquid core.
+categories:
   - research
-date: "2021-01-18T00:00:00Z"
-
-# Optional external URL for project (replaces project detail page).
-external_link: ""
-
-image:
-  caption: 
-  focal_point: Smart
-  preview_only: true
-  alt_text: 3D render of dynamo simulation containing an F-layer
-
-links:
-- icon: github
-  icon_pack: fab
-  name: GitHub
-  url: https://github.com/jnywong/paropy
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
-
-# Slides (optional).
-#   Associate this project with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
-slides: ""
+  - geodynamo
+  - fluid dynamics
+  - python
+about:
+  template: marquee
+  image: featured.png
+  image-width: 90%
+from: markdown+emoji
 ---
 [![PyPI version](https://badge.fury.io/py/paropy.svg)](https://badge.fury.io/py/paropy)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-# paropy
 
 Welcome! Here is my Python package to process data from PARODY-JA4.3 dynamo simulations with a stably-stratified F-layer at the base of the outer core. 
 
@@ -112,9 +93,9 @@ saveDir = <path_to_savefigs>
 
 4. Admire the output:
 
-![](https://raw.githubusercontent.com/jnywong/paropy/master/docs/diag1_test.png)
+![](https://github.com/jnywong/paropy/blob/master/docs/diag1_test.png?raw=true)
 
-![](https://raw.githubusercontent.com/jnywong/paropy/master/docs/diag2_test.png)
+![](https://github.com/jnywong/paropy/blob/master/docs/diag2_test.png?raw=true)
 
 ### Meridional snapshots
 
@@ -132,7 +113,7 @@ saveDir = <path_to_savefigs>
 
 4. Admire the output:
 
-![](https://raw.githubusercontent.com/jnywong/paropy/master/docs/merid_test.png)
+![](https://github.com/jnywong/paropy/blob/master/docs/merid_test.png?raw=true)
 
 ### Surface snapshots
 
@@ -150,7 +131,7 @@ saveDir = <path_to_savefigs>
 
 4. Admire the output:
 
-![](https://raw.githubusercontent.com/jnywong/paropy/master/docs/surface_test.png)
+![](https://github.com/jnywong/paropy/blob/master/docs/surface_test.png?raw=true)
 
 ## Links
 
@@ -167,7 +148,7 @@ saveDir = <path_to_savefigs>
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/jnywong/paropy/blob/master/LICENSE.md) file for details
 
 ## Acknowledgments
 
