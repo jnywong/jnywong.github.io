@@ -1,0 +1,30 @@
+/* css styles */
+
+#badge-license {
+    width: 88px;
+}
+
+#badge-license {
+    width: 88px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    background: -webkit-linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a {
+    color: #de005e;
+    font-weight: bold;
+}
+
+.navbar-dark {
+    background-color: #9e2668;
+}
+
+a.quarto-grid-link {
+    font-weight: normal;
+}

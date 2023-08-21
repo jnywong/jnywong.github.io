@@ -1,0 +1,198 @@
+[
+  {
+    "objectID": "projects/slurpy/index.html#getting-started",
+    "href": "projects/slurpy/index.html#getting-started",
+    "title": "slurpy",
+    "section": "Getting Started",
+    "text": "Getting Started\n\nPrerequisites\n\nPython\n\n\n\nInstalling\nConda:\nconda install -c jnywong nondim-slurry\nPip:\npip install nondim-slurry\nGit:\nFind the latest version of the repository here."
+  },
+  {
+    "objectID": "projects/slurpy/index.html#package-structure",
+    "href": "projects/slurpy/index.html#package-structure",
+    "title": "slurpy",
+    "section": "Package structure",
+    "text": "Package structure\nslurpy/\n  __init__.py\n  coreproperties.py\n  data_utils.py\n  getparameters.py\n  lookup.py\n  lookupdata/\n    denPREM.csv\n    gravPREM.csv\n    presPREM.csv\n    radAK135.csv\n    radPREM.csv\n    vpAK135.csv\n    vpPREM.csv\n  plot_utils.py\n  scripts/\n    parameter_search.py\n    seismic.py\n    sensitivity.py\n  slurry.py"
+  },
+  {
+    "objectID": "projects/slurpy/index.html#example-scripts",
+    "href": "projects/slurpy/index.html#example-scripts",
+    "title": "slurpy",
+    "section": "Example scripts",
+    "text": "Example scripts\n\nParameter search\n\nOpen scripts/parameter_search.py\nEnter some input parameters. For example, try:\n\n# %% MODEL INPUTS\n# Show plots?\nplotOn=1 # show temp, xi, solid flux and density profiles\n# Input parameters\nlayer_thicknesses=np.array([150e3]) # (m)\nthermal_conductivities=np.array([100.]) # (W m^-1 K^-1)\nicb_heatfluxes=np.array([3.4]) # (TW)\ncsb_heatfluxes=np.array([7.4]) # (TW)\nh=0.05 # stepsize of heat flux through parameter space\n\nRun parameter_search.py\nAdmire the output:\n\n\n\n\nSensitivity study\n\nOpen scripts/sensitivity.py\nEnter some input parameters. For example, try:\n\n# %% MODEL INPUTS\n# Save plot?\nsaveOn=0\n# Input parameters\nlayer_thickness=150e3 # (m)\nthermal_conductivity=100. # (W m^-1 K^-1)\nicb_heatflux=2.5 # (TW)\ncsb_heatflux=5.0 # (TW)\nh=0.05 # stepsize of heat flux through parameter space\n# Sensitivity study\ncsb_temp = np.arange(4500.,6100.,100) # (K)\ncsb_oxy = np.arange(2,12.5,0.5) # (mol.%)\nsed_con= np.array([1e-5,1e-4,1e-3,1e-2,1e-1]) # (kg s/m^3) pre-factor in sedimentation coefficient, b(phi)\n\nRun sensitivity.py\nAdmire the output:"
+  },
+  {
+    "objectID": "projects/slurpy/index.html#links",
+    "href": "projects/slurpy/index.html#links",
+    "title": "slurpy",
+    "section": "Links",
+    "text": "Links\n\nPyPI\nAnaconda Cloud"
+  },
+  {
+    "objectID": "projects/slurpy/index.html#authors",
+    "href": "projects/slurpy/index.html#authors",
+    "title": "slurpy",
+    "section": "Authors",
+    "text": "Authors\n\nJenny Wong - University of Leeds - Institut de Physique du Globe de Paris - Institut des Sciences de la Terre\nChris Davies - University of Leeds\nChris Jones - University of Leeds"
+  },
+  {
+    "objectID": "projects/slurpy/index.html#license",
+    "href": "projects/slurpy/index.html#license",
+    "title": "slurpy",
+    "section": "License",
+    "text": "License\nThis project is licensed under the MIT License - see the LICENSE.md file for details"
+  },
+  {
+    "objectID": "projects/slurpy/index.html#acknowledgments",
+    "href": "projects/slurpy/index.html#acknowledgments",
+    "title": "slurpy",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\n\nERC SEIC\nDel Duca Foundation\nEPSRC Centre for Doctoral Training in Fluid Dynamics\n\n🎉"
+  },
+  {
+    "objectID": "projects/convect-jl/index.html",
+    "href": "projects/convect-jl/index.html",
+    "title": "convect-jl",
+    "section": "",
+    "text": "Welcome! Here is my Julia code to simulate 2D convection in a Cartesian box. Theory and methods used can be found in Introduction to Modeling Convection in Planets and Stars: Magnetic Field, Density Stratification, Rotation."
+  },
+  {
+    "objectID": "projects/convect-jl/index.html#getting-started",
+    "href": "projects/convect-jl/index.html#getting-started",
+    "title": "convect-jl",
+    "section": "Getting Started",
+    "text": "Getting Started\n\nPre-requisites\n\nJulia (version 1.6)"
+  },
+  {
+    "objectID": "projects/convect-jl/index.html#package-structure",
+    "href": "projects/convect-jl/index.html#package-structure",
+    "title": "convect-jl",
+    "section": "Package structure",
+    "text": "Package structure\nconvect-jl\n    docs/\n    src/\n        convect_linear.jl\n        convect_nonlinear.jl\n        critical_ra.jl\n        data_utils.jl\n        postprocess.jl\n        routines.jl\n    LICENSE.md\n    README.md"
+  },
+  {
+    "objectID": "projects/convect-jl/index.html#examples",
+    "href": "projects/convect-jl/index.html#examples",
+    "title": "convect-jl",
+    "section": "Examples",
+    "text": "Examples\n\nLinear convection\n\nOpen src/convect_linear.jl\nSpecify input parameters\n\n# Inputs\nnz = 101 # no. of vertical gridpoints\nnn = 30 # no. of horizontal Fourier modes (excluding zeroth mode)\na = 5 # L/D aspect ratio\nRa = 2700 # Rayleigh number\nPr = 0.5 # Prandtl number\nnt = 1e5 # no. of timesteps\nnout = 1e3 # output every nout timesteps\nzeroth = 0 # include zeroth order temperature in plot?\ninitOn = 1\nsaveDir = \"/Users/wongj/Documents/convect-out/linear/2021-09-03\"\n\nRun script from terminal using julia &lt;working directory&gt;/convect-jl/src/convect_linear.jl (or from julia REPL using include(\"&lt;working directory&gt;/convect-jl/src/convect_linear.jl\") )\nAdmire the output:\n\n\n\n\nNonlinear convection\n\nOpen src/convect_nonlinear.jl\nSpecify input parameters\n\n# Inputs\nnz = 101 # no. of vertical gridpoints\nnn = 50 # no. of Fourier modes (excluding zeroth mode)\na = 3 # L/D aspect ratio\nRa = 1e6 # Rayleigh number\nPr = 0.5 # Prandtl number\ndt = 3e-6 # timestep size\nnt = 1e4 # no. of timesteps\nnout = 1e2 # save output every nout timesteps\ninitOn = 1 # initialise run, otherwise load existing data\nsaveDir = \"/Users/wongj/Documents/convect-out/2021-09-03\" # save directory\n\nRun script from terminal using julia &lt;working directory&gt;/convect-jl/src/convect_nonlinear.jl (or from julia REPL using include(\"&lt;working directory&gt;/convect-jl/src/convect_nonlinear.jl\") )\nPostprocess and visualise the data using julia &lt;working directory&gt;/convect-jl/src/postprocess.jl (or from julia REPL using include(\"&lt;working directory&gt;/convect-jl/src/postprocess.jl\") ) with the following input parameters\n\n# Inputs\nsaveDir = \"/Users/wongj/Documents/convect-out/2021-09-03\" # save directory\nnStart = 1\nnEnd = 500\nzeroth= 1 # plot zeroth mode?\n\nAdmire the output:"
+  },
+  {
+    "objectID": "projects/convect-jl/index.html#authors",
+    "href": "projects/convect-jl/index.html#authors",
+    "title": "convect-jl",
+    "section": "Authors",
+    "text": "Authors\n\nJenny Wong - Institut des Sciences de la Terre"
+  },
+  {
+    "objectID": "projects/convect-jl/index.html#license",
+    "href": "projects/convect-jl/index.html#license",
+    "title": "convect-jl",
+    "section": "License",
+    "text": "License\nThis project is licensed under the MIT License - see the LICENSE.md file for details\n🎉"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Dr Jenny Wong",
+    "section": "",
+    "text": "Hello! My name is Jenny and I am a Senior Research Software Engineer in the Advanced Research Computing department at the University of Birmingham.\nI collaborate with research teams across the university on coding projects and provide specialist software support.\nI also engage with high performance computing (HPC) user communities to lower the barrier to access to supercomputing through delivering training and workshops, and I am a certified NVIDIA University Ambassador and Carpentries Instructor.\nThis website contains a short bio about me, as well as a collection of presentations and content related to my research projects and training materials."
+  },
+  {
+    "objectID": "index.html#senior-research-software-engineer",
+    "href": "index.html#senior-research-software-engineer",
+    "title": "Dr Jenny Wong",
+    "section": "",
+    "text": "Hello! My name is Jenny and I am a Senior Research Software Engineer in the Advanced Research Computing department at the University of Birmingham.\nI collaborate with research teams across the university on coding projects and provide specialist software support.\nI also engage with high performance computing (HPC) user communities to lower the barrier to access to supercomputing through delivering training and workshops, and I am a certified NVIDIA University Ambassador and Carpentries Instructor.\nThis website contains a short bio about me, as well as a collection of presentations and content related to my research projects and training materials."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I am a Senior Research Software Engineer and joined the Advanced Research Computing department at the University of Birmingham, UK, in December 2021. I have a strong technical background, with over 8 years engaged in STEM research across the UK and France. My strength is in mathematics and numerical modelling, with experience using HPC to run cutting-edge simulations.\nI am currently responsible for developing and operationalising a space weather forecasting model, which ingests up to 250GB of data per hour of live data streams from global navigation satellite systems and radar. My expertise in high-performance computing and data engineering enables the seamless integration of high-quality observational data with data assimilation modelling to produce high-fidelity forecasts of space weather in the Earth’s ionosphere. I orchestrate this computationally intensive process by writing custom asynchronous task queues to distribute processes across computer clusters and combine the resulting outputs into a user-friendly web framework for analysis and visualisation, achieved using Celery, Django and Plotly. I also achieved 5x the performance of the data assimilation through code profiling and parallelising routines. This product is developed in collaboration with ESA and the UK Met Office.\nI am also responsible for providing the research software support service of the EPSRC Tier 2 Baskerville supercomputer, a national facility in which I manage stakeholder relationships with The Alan Turing Institute, The Rosalind Franklin Institute, and Diamond Light Source (the UK’s national synchrotron). I regularly engage and support researchers with writing documentation, creating video tutorials, and designing and delivering training events to enhance accessibility to compute. For example, I have designed and delivered several data engineering and deep learning Jupyter notebook courses as a qualified NVIDIA DLI and Software Carpentries Instructor, and I maintain the Baskerville HPC GitHub repo."
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "About",
+    "section": "Experience",
+    "text": "Experience\nUniversity of Birmingham, Birmingham\nSenior Research Software Engineer\nDecember 2021 - Present\n\nAccelerating and profiling data assimilation codes for space weather forecasts, which ingest up to 250GB per hour of data from hundreds of stations globally, and implementing interactive, web-based visualisations.\nCertified NVIDIA Instructor providing data engineering and deep learning training for researchers, and general high-performance computing support.\n\nInstitut des Sciences de la Terre, Grenoble\nPostdoctoral Researcher\nJuly 2020 - November 2021\n\nDeveloped a model of differential equations describing the physics of phase change and compaction of a solid-liquid system, and solved them using finite volume methods in Python.\n\nInstitut de Physique du Globe de Paris, Paris\nPostdoctoral Researcher\nFebruary 2019 - July 2020\n\nRan large-scale numerical simulations solving the magneto-hydrodynamic equations describing the Earth’s dynamo on high-performance computers using Fortran and OpenMP, and post-processed large data sets in Python."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\nUniversity of Leeds, Leeds\nPhD, MSc Fluid Dynamics\nSeptember 2014 - February 2019\nThesis: A Slurry Model of the F-Layer in the Earth’s Core\nUniversity of Leeds, Leeds\nMMath, BSc Mathematics\nSeptember 2009 - July 2013\nFirst Class Honours\n Download CV (PDF)"
+  },
+  {
+    "objectID": "about.html#publications",
+    "href": "about.html#publications",
+    "title": "About",
+    "section": "Publications",
+    "text": "Publications\nA regime diagram for the slurry F-layer at the base of Earth’s outer core\nJ Wong, CJ Davies, CA Jones\nEarth and Planetary Science Letters 560, 116791 (2021)\nStably stratified layers within Earth’s core\nC Hardy, J Wong\nAstronomy & Geophysics 60 (3), 3.30-3.35 (2019)\n\nA Boussinesq slurry model of the F-layer at the base of Earth’s outer core\nJ Wong, CJ Davies, CA Jones\nGeophysical Journal International 214 (3), 2236-2249 (2018)\nDesign and operation of a Rayleigh Ohnesorge jetting extensional rheometer (ROJER) to study extensional properties of low viscosity polymer solutions\nE Greiciunas, J Wong, I Gorbatenko, J Hall, MCT Wilson, N Kapur, et al.\nJournal of Rheology 61 (3), 467-476 (2017)"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nconvect-jl\n\n\n\nnon-linear convection\n\n\nfluid dynamics\n\n\njulia\n\n\n\nAn open source Julia code to simulate 2D convection in a Cartesian box.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nparopy\n\n\n\nresearch\n\n\ngeodynamo\n\n\nfluid dynamics\n\n\npython\n\n\n\nAn open source python package to process data from PARODY-JA4.3 dynamo simulations with a stably-stratified F-layer at the base of the outer core.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nslurpy\n\n\n\nresearch\n\n\ntwo phase systems\n\n\nfluid dynamics\n\n\npython\n\n\n\nAn open source python package to solve the 1D, steady, spherical slurry system outlined in [Wong et al.…\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/paropy/index.html#getting-started",
+    "href": "projects/paropy/index.html#getting-started",
+    "title": "paropy",
+    "section": "Getting Started",
+    "text": "Getting Started\nWelcome! Here is my Python package to process data from PARODY-JA4.3 dynamo simulations with a stably-stratified F-layer at the base of the outer core.\n\nPrerequisites\n\nPython3\nSHTns\nChaosMagPy\n\n\n\nInstalling\nConda:\nconda install -c jnywong paropy\nPip:\npip install paropy\nGit:\nFind the Git repo here.\n\nWarning: IPython issue\nPlease note that ipython may not be compatible with jedi release 0.18.0. Please revert to version 0.17.2 for auto-complete features to work (see here)."
+  },
+  {
+    "objectID": "projects/paropy/index.html#package-structure",
+    "href": "projects/paropy/index.html#package-structure",
+    "title": "paropy",
+    "section": "Package structure",
+    "text": "Package structure\nparopy/\n  docs/\n  paropy/\n    __init__.py\n    data_utils.py\n    plot_utils.py\n    routines.py\n    scripts/\n      convective_power.py\n      diagnostics.py\n      diagnostic_parameters.py\n      filter_surface_field.py\n      latitude_vs_Br.py\n      latitude_vs_Br_with_CHAOS.py\n      meridional_snapshot.py\n      meridional_timeavg.py\n      rotation_rate.py\n      surface_snapshot.py\n      surface_timeavg.py\n    data/\n      CHAOS-7.7.mat\n  LICENSE.md\n  MANIFEST.in\n  README.md\n  setup.py"
+  },
+  {
+    "objectID": "projects/paropy/index.html#examples",
+    "href": "projects/paropy/index.html#examples",
+    "title": "paropy",
+    "section": "Examples",
+    "text": "Examples\n\nDiagnostics\nExample scripts can be found within the module paropy.\n\nOpen paropy/scripts/diagnostics.py\nSet path to simulation data by setting\n\nrun_ID = &lt;run_ID&gt; # PARODY simulation tag\ndirectory = &lt;path_to_data&gt;\nsaveDir = &lt;path_to_savefigs&gt;\n\nRun paropy/scripts/diagnostics.py\nAdmire the output:\n\n\n\n\n\nMeridional snapshots\n\nOpen paropy/scripts/meridional_snapshot.py\nSet path to simulation data and snapshot time by setting\n\nrun_ID, timestamp = 'c-200a', '16.84707134'\ndirectory = &lt;path_to_data&gt;\nsaveDir = &lt;path_to_savefigs&gt;\n\nRun paropy/scripts/meridional_snapshot.py\nAdmire the output:\n\n\n\n\nSurface snapshots\n\nOpen paropy/scripts/surface_snapshot.py\nSet path to simulation data and snapshot time by setting\n\nrun_ID, timestamp = 'c-200a', '16.84707134'\ndirectory = &lt;path_to_data&gt;\nsaveDir = &lt;path_to_savefigs&gt;\n\nRun paropy/scripts/surface_snapshot.py\nAdmire the output:"
+  },
+  {
+    "objectID": "projects/paropy/index.html#links",
+    "href": "projects/paropy/index.html#links",
+    "title": "paropy",
+    "section": "Links",
+    "text": "Links\n\nPyPI\nAnaconda Cloud"
+  },
+  {
+    "objectID": "projects/paropy/index.html#data",
+    "href": "projects/paropy/index.html#data",
+    "title": "paropy",
+    "section": "Data",
+    "text": "Data\n\nCHAOS-7.7 (Finlay et al. 2020)"
+  },
+  {
+    "objectID": "projects/paropy/index.html#authors",
+    "href": "projects/paropy/index.html#authors",
+    "title": "paropy",
+    "section": "Authors",
+    "text": "Authors\n\nJenny Wong - Institut de Physique du Globe de Paris - Institut des Sciences de la Terre"
+  },
+  {
+    "objectID": "projects/paropy/index.html#license",
+    "href": "projects/paropy/index.html#license",
+    "title": "paropy",
+    "section": "License",
+    "text": "License\nThis project is licensed under the MIT License - see the LICENSE.md file for details"
+  },
+  {
+    "objectID": "projects/paropy/index.html#acknowledgments",
+    "href": "projects/paropy/index.html#acknowledgments",
+    "title": "paropy",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\n\nDel Duca Foundation\nERC SEIC\n\n🎉"
+  }
+]
