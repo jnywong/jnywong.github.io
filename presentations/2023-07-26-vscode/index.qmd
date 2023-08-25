@@ -10,6 +10,16 @@ image-alt: VSCode Remote Development slide cover
 categories:
   - baskerville
   - vscode
+  - hpc
 ---
 
 <a href="vscode.html" target="_blank">These are the slides</a> for this presentation.
+
+This presentation covers:
+
+1. How to install the Remote SSH extension
+2. How to add a new SSH host
+3. How to close a remote connection
+4. How to install the Remote Explorer extension
+5. Port forwarding Tensorboard
+6. How to keep sessions alive with tmux, including how to configure SSH ProxyJump to access the same login node where your tmux-server lives. 
