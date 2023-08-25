@@ -1,0 +1,17 @@
+---
+title:  Baskerville Basics | Baskerville Portal
+description: Baskerville Portal provides web-based access to the Baskerville HPC cluster - no software installs are needed, just grab your browser and go! Run interactive jobs with GUI apps, such as JupyterHub, on Baskerville Portal. I also cover how to self-install software with Conda. 
+location: University of Birmingham, UK
+date: "2023-05-13"
+date-modified: "2023-08-30"
+image: featured.png
+image-alt: Baskerville Basics - Baskerville portal slide cover
+categories:
+  - baskerville
+  - jupyterhub
+  - hpc
+  - openondemand
+  - conda
+---
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-BLDD-ZnqWA?si=YHJSufaua0YBfMuh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

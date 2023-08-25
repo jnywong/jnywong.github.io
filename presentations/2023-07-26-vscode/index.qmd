@@ -1,0 +1,25 @@
+---
+title:  VSCode for Remote Development
+description: Baskerville Remote Drop-In topic demonstrating VSCode for remote development.
+event: Baskerville Remote Drop-In
+location: University of Birmingham, UK (remote)
+date: "2023-07-26"
+date-modified: "2023-07-26"
+image: featured.png
+image-alt: VSCode Remote Development slide cover
+categories:
+  - baskerville
+  - vscode
+  - hpc
+---
+
+<a href="vscode.html" target="_blank">These are the slides</a> for this presentation.
+
+This presentation covers:
+
+1. How to install the Remote SSH extension
+2. How to add a new SSH host
+3. How to close a remote connection
+4. How to install the Remote Explorer extension
+5. Port forwarding Tensorboard
+6. How to keep sessions alive with tmux, including how to configure SSH ProxyJump to access the same login node where your tmux-server lives. 
