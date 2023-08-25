@@ -91,25 +91,11 @@
     "text": "License\nThis project is licensed under the MIT License - see the LICENSE.md file for details\n🎉"
   },
   {
-    "objectID": "presentations/2023-07-26-vscode/index.html",
-    "href": "presentations/2023-07-26-vscode/index.html",
-    "title": "VSCode for Remote Development",
+    "objectID": "presentations.html",
+    "href": "presentations.html",
+    "title": "Presentations",
     "section": "",
-    "text": "These are the slides for this presentation."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Dr Jenny Wong",
-    "section": "",
-    "text": "Hello! My name is Jenny and I am a Senior Research Software Engineer in the Advanced Research Computing department at the University of Birmingham.\nI collaborate with research teams across the university on coding projects and provide specialist software support.\nI also engage with high performance computing (HPC) user communities to lower the barrier to access to supercomputing through delivering training and workshops, and I am a certified NVIDIA University Ambassador and Carpentries Instructor.\nThis website contains a short bio about me, as well as a collection of presentations and content related to my research projects and training materials."
-  },
-  {
-    "objectID": "index.html#senior-research-software-engineer",
-    "href": "index.html#senior-research-software-engineer",
-    "title": "Dr Jenny Wong",
-    "section": "",
-    "text": "Hello! My name is Jenny and I am a Senior Research Software Engineer in the Advanced Research Computing department at the University of Birmingham.\nI collaborate with research teams across the university on coding projects and provide specialist software support.\nI also engage with high performance computing (HPC) user communities to lower the barrier to access to supercomputing through delivering training and workshops, and I am a certified NVIDIA University Ambassador and Carpentries Instructor.\nThis website contains a short bio about me, as well as a collection of presentations and content related to my research projects and training materials."
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nBaskerville Basics | Batch Jobs\n\n\n\n\n\n\n\nbaskerville\n\n\nbatch jobs\n\n\nhpc\n\n\nslurm\n\n\n \n\n\n\n\nAug 30, 2023\n\n\nUniversity of Birmingham, UK\n\n\n\n\n\n\n  \n\n\n\n\nVSCode for Remote Development\n\n\n\n\n\n\n\nbaskerville\n\n\nvscode\n\n\nhpc\n\n\n \n\n\n\n\nJul 26, 2023\n\n\nUniversity of Birmingham, UK (remote)\n\n\nBaskerville Remote Drop-In\n\n\n\n\n\n\n  \n\n\n\n\nBaskerville Basics | Baskerville Portal\n\n\n\n\n\n\n\nbaskerville\n\n\njupyterhub\n\n\nhpc\n\n\nopenondemand\n\n\nconda\n\n\n \n\n\n\n\nMay 13, 2023\n\n\nUniversity of Birmingham, UK\n\n\n\n\n\n\n  \n\n\n\n\nBaskerville Basics | First Time Access\n\n\n\n\n\n\n\nbaskerville\n\n\nhpc\n\n\nssh\n\n\n \n\n\n\n\nJun 22, 2022\n\n\nUniversity of Birmingham, UK\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -140,11 +126,25 @@
     "text": "Publications\nA regime diagram for the slurry F-layer at the base of Earth’s outer core\nJ Wong, CJ Davies, CA Jones\nEarth and Planetary Science Letters 560, 116791 (2021)\nStably stratified layers within Earth’s core\nC Hardy, J Wong\nAstronomy & Geophysics 60 (3), 3.30-3.35 (2019)\n\nA Boussinesq slurry model of the F-layer at the base of Earth’s outer core\nJ Wong, CJ Davies, CA Jones\nGeophysical Journal International 214 (3), 2236-2249 (2018)\nDesign and operation of a Rayleigh Ohnesorge jetting extensional rheometer (ROJER) to study extensional properties of low viscosity polymer solutions\nE Greiciunas, J Wong, I Gorbatenko, J Hall, MCT Wilson, N Kapur, et al.\nJournal of Rheology 61 (3), 467-476 (2017)"
   },
   {
-    "objectID": "presentations.html",
-    "href": "presentations.html",
-    "title": "Presentations",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Dr Jenny Wong",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nVSCode for Remote Development\n\n\n\n\n\n\n\nbaskerville\n\n\nvscode\n\n\n \n\n\n\n\nJul 26, 2023\n\n\nUniversity of Birmingham, UK (remote)\n\n\nBaskerville Remote Drop-In\n\n\n\n\n\n\nNo matching items"
+    "text": "Hello! My name is Jenny and I am a Senior Research Software Engineer in the Advanced Research Computing department at the University of Birmingham.\nI collaborate with research teams across the university on coding projects and provide specialist software support.\nI also engage with high performance computing (HPC) user communities to lower the barrier to access to supercomputing through delivering training and workshops, and I am a certified NVIDIA University Ambassador and Carpentries Instructor.\nThis website contains a short bio about me, as well as a collection of presentations and content related to my research projects and training materials."
+  },
+  {
+    "objectID": "index.html#senior-research-software-engineer",
+    "href": "index.html#senior-research-software-engineer",
+    "title": "Dr Jenny Wong",
+    "section": "",
+    "text": "Hello! My name is Jenny and I am a Senior Research Software Engineer in the Advanced Research Computing department at the University of Birmingham.\nI collaborate with research teams across the university on coding projects and provide specialist software support.\nI also engage with high performance computing (HPC) user communities to lower the barrier to access to supercomputing through delivering training and workshops, and I am a certified NVIDIA University Ambassador and Carpentries Instructor.\nThis website contains a short bio about me, as well as a collection of presentations and content related to my research projects and training materials."
+  },
+  {
+    "objectID": "presentations/2023-07-26-vscode/index.html",
+    "href": "presentations/2023-07-26-vscode/index.html",
+    "title": "VSCode for Remote Development",
+    "section": "",
+    "text": "These are the slides for this presentation.\nThis presentation covers:\n\nHow to install the Remote SSH extension\nHow to add a new SSH host\nHow to close a remote connection\nHow to install the Remote Explorer extension\nPort forwarding Tensorboard\nHow to keep sessions alive with tmux, including how to configure SSH ProxyJump to access the same login node where your tmux-server lives."
   },
   {
     "objectID": "projects.html",

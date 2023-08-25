@@ -2,34 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jnywong.github.io/projects/slurpy/index.html</loc>
-    <lastmod>2023-08-25T15:28:28.555Z</lastmod>
+    <lastmod>2023-08-25T16:08:42.824Z</lastmod>
   </url>
   <url>
     <loc>https://jnywong.github.io/projects/convect-jl/index.html</loc>
-    <lastmod>2023-08-25T15:28:27.851Z</lastmod>
+    <lastmod>2023-08-25T16:08:42.112Z</lastmod>
   </url>
   <url>
-    <loc>https://jnywong.github.io/presentations/2023-07-26-vscode/index.html</loc>
-    <lastmod>2023-08-25T15:28:26.960Z</lastmod>
+    <loc>https://jnywong.github.io/presentations/2023-08-30-baskerville-batch-jobs/index.html</loc>
+    <lastmod>2023-08-25T16:08:41.243Z</lastmod>
   </url>
   <url>
-    <loc>https://jnywong.github.io/index.html</loc>
-    <lastmod>2023-08-25T15:28:26.274Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jnywong.github.io/about.html</loc>
-    <lastmod>2023-08-25T15:28:25.953Z</lastmod>
+    <loc>https://jnywong.github.io/presentations/2023-05-15-baskerville-portal/index.html</loc>
+    <lastmod>2023-08-25T16:08:40.626Z</lastmod>
   </url>
   <url>
     <loc>https://jnywong.github.io/presentations.html</loc>
-    <lastmod>2023-08-25T15:28:26.643Z</lastmod>
+    <lastmod>2023-08-25T16:08:39.982Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jnywong.github.io/about.html</loc>
+    <lastmod>2023-08-25T16:08:39.119Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jnywong.github.io/index.html</loc>
+    <lastmod>2023-08-25T16:08:39.463Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jnywong.github.io/presentations/2023-05-15-baskerville-first-time-access/index.html</loc>
+    <lastmod>2023-08-25T16:08:40.305Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jnywong.github.io/presentations/2023-07-26-vscode/index.html</loc>
+    <lastmod>2023-08-25T16:08:40.945Z</lastmod>
   </url>
   <url>
     <loc>https://jnywong.github.io/projects.html</loc>
-    <lastmod>2023-08-25T15:28:27.476Z</lastmod>
+    <lastmod>2023-08-25T16:08:41.762Z</lastmod>
   </url>
   <url>
     <loc>https://jnywong.github.io/projects/paropy/index.html</loc>
-    <lastmod>2023-08-25T15:28:28.202Z</lastmod>
+    <lastmod>2023-08-25T16:08:42.474Z</lastmod>
   </url>
 </urlset>
