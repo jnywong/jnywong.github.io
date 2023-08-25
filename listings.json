@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/presentations.html",
+    "items": [
+      "/presentations/2023-07-26-vscode/index.html"
+    ]
+  },
+  {
     "listing": "/projects.html",
     "items": [
       "/projects/convect-jl/index.html",

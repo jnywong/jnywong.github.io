@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jnywong.github.io/projects/slurpy/index.html</loc>
-    <lastmod>2023-08-21T16:02:15.036Z</lastmod>
+    <lastmod>2023-08-25T15:28:28.555Z</lastmod>
   </url>
   <url>
     <loc>https://jnywong.github.io/projects/convect-jl/index.html</loc>
-    <lastmod>2023-08-21T16:02:14.315Z</lastmod>
+    <lastmod>2023-08-25T15:28:27.851Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jnywong.github.io/presentations/2023-07-26-vscode/index.html</loc>
+    <lastmod>2023-08-25T15:28:26.960Z</lastmod>
   </url>
   <url>
     <loc>https://jnywong.github.io/index.html</loc>
-    <lastmod>2023-08-21T16:02:13.394Z</lastmod>
+    <lastmod>2023-08-25T15:28:26.274Z</lastmod>
   </url>
   <url>
     <loc>https://jnywong.github.io/about.html</loc>
-    <lastmod>2023-08-21T16:02:13.058Z</lastmod>
+    <lastmod>2023-08-25T15:28:25.953Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jnywong.github.io/presentations.html</loc>
+    <lastmod>2023-08-25T15:28:26.643Z</lastmod>
   </url>
   <url>
     <loc>https://jnywong.github.io/projects.html</loc>
-    <lastmod>2023-08-21T16:02:13.974Z</lastmod>
+    <lastmod>2023-08-25T15:28:27.476Z</lastmod>
   </url>
   <url>
     <loc>https://jnywong.github.io/projects/paropy/index.html</loc>
-    <lastmod>2023-08-21T16:02:14.679Z</lastmod>
+    <lastmod>2023-08-25T15:28:28.202Z</lastmod>
   </url>
 </urlset>

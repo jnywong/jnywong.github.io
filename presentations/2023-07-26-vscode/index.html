@@ -6,9 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jenny Wong">
+<meta name="dcterms.date" content="2023-07-26">
 <meta name="description" content="Jenny Wong’s personal website.">
 
-<title>jnywong.github.io - slurpy</title>
+<title>jnywong.github.io - VSCode for Remote Development</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,6 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -68,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -116,157 +119,65 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
 <!-- main -->
-<div class="quarto-about-marquee">
-  <div class="about-image-container">
-    <img src="featured.png" alt="Figure containing 2D plots of temperature, composition, solid flux and density as a function of depth." class="about-image " style="width: 90%;">
-  </div>
-  <div class="about-contents">
-    <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">slurpy</h1>
+<h1 class="title">VSCode for Remote Development</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">research</div>
-    <div class="quarto-category">two phase systems</div>
-    <div class="quarto-category">fluid dynamics</div>
-    <div class="quarto-category">python</div>
+    <div class="quarto-category">baskerville</div>
+    <div class="quarto-category">vscode</div>
   </div>
   </div>
+
 <div>
   <div class="description">
-    An open source python package to solve the 1D, steady, spherical slurry system outlined in <a href="https://www.sciencedirect.com/science/article/am/pii/S0012821X21000509">Wong et al.&nbsp;(2021)</a> (see also <a href="https://academic.oup.com/gji/article-pdf/214/3/2236/36134435/ggy245.pdf">Wong et al.&nbsp;2018</a>).
+    Baskerville Remote Drop-In topic demonstrating VSCode for remote development.
   </div>
 </div>
+
+
 <div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p><a href="https://jnywong.github.io">Jenny Wong</a> </p>
+          </div>
   </div>
-</header> <main class="content" id="quarto-document-content">
-<p><a href="https://travis-ci.org/jnywong/nondim-slurry"><img src="https://travis-ci.org/jnywong/nondim-slurry.svg?branch=master" class="img-fluid" alt="Build Status"></a> <a href="https://doi.org/10.5281/zenodo.4446750"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4446750.svg" class="img-fluid" alt="DOI"></a></p>
-<section id="getting-started" class="level2">
-<h2 data-anchor-id="getting-started">Getting Started</h2>
-<section id="prerequisites" class="level3">
-<h3 data-anchor-id="prerequisites">Prerequisites</h3>
-<ul>
-<li><a href="https://www.python.org/">Python</a></li>
-</ul>
-</section>
-<section id="installing" class="level3">
-<h3 data-anchor-id="installing">Installing</h3>
-<p>Conda:</p>
-<pre><code>conda install -c jnywong nondim-slurry</code></pre>
-<p>Pip:</p>
-<pre><code>pip install nondim-slurry</code></pre>
-<p>Git:</p>
-<p>Find the latest version of the repository <a href="https://github.com/jnywong/nondim-slurry">here</a>.</p>
-</section>
-</section>
-<section id="package-structure" class="level2">
-<h2 data-anchor-id="package-structure">Package structure</h2>
-<pre><code>slurpy/
-  __init__.py
-  coreproperties.py
-  data_utils.py
-  getparameters.py
-  lookup.py
-  lookupdata/
-    denPREM.csv
-    gravPREM.csv
-    presPREM.csv
-    radAK135.csv
-    radPREM.csv
-    vpAK135.csv
-    vpPREM.csv
-  plot_utils.py
-  scripts/
-    parameter_search.py
-    seismic.py
-    sensitivity.py
-  slurry.py</code></pre>
-</section>
-<section id="example-scripts" class="level2">
-<h2 data-anchor-id="example-scripts">Example scripts</h2>
-<section id="parameter-search" class="level3">
-<h3 data-anchor-id="parameter-search">Parameter search</h3>
-<ol type="1">
-<li><p>Open <code>scripts/parameter_search.py</code></p></li>
-<li><p>Enter some input parameters. For example, try:</p></li>
-</ol>
-<pre><code># %% MODEL INPUTS
-# Show plots?
-plotOn=1 # show temp, xi, solid flux and density profiles
-# Input parameters
-layer_thicknesses=np.array([150e3]) # (m)
-thermal_conductivities=np.array([100.]) # (W m^-1 K^-1)
-icb_heatfluxes=np.array([3.4]) # (TW)
-csb_heatfluxes=np.array([7.4]) # (TW)
-h=0.05 # stepsize of heat flux through parameter space</code></pre>
-<ol start="3" type="1">
-<li><p>Run <code>parameter_search.py</code></p></li>
-<li><p>Admire the output:</p></li>
-</ol>
-<p><img src="https://github.com/jnywong/nondim-slurry/blob/master/docs/simple_output.png?raw=true" class="img-fluid"></p>
-</section>
-<section id="sensitivity-study" class="level3">
-<h3 data-anchor-id="sensitivity-study">Sensitivity study</h3>
-<ol type="1">
-<li><p>Open <code>scripts/sensitivity.py</code></p></li>
-<li><p>Enter some input parameters. For example, try:</p></li>
-</ol>
-<pre><code># %% MODEL INPUTS
-# Save plot?
-saveOn=0
-# Input parameters
-layer_thickness=150e3 # (m)
-thermal_conductivity=100. # (W m^-1 K^-1)
-icb_heatflux=2.5 # (TW)
-csb_heatflux=5.0 # (TW)
-h=0.05 # stepsize of heat flux through parameter space
-# Sensitivity study
-csb_temp = np.arange(4500.,6100.,100) # (K)
-csb_oxy = np.arange(2,12.5,0.5) # (mol.%)
-sed_con= np.array([1e-5,1e-4,1e-3,1e-2,1e-1]) # (kg s/m^3) pre-factor in sedimentation coefficient, b(phi)</code></pre>
-<ol start="3" type="1">
-<li><p>Run <code>sensitivity.py</code></p></li>
-<li><p>Admire the output:</p></li>
-</ol>
-<p><img src="https://github.com/jnywong/nondim-slurry/blob/master/docs/sensitivity_example.png?raw=true" class="img-fluid"></p>
-</section>
-</section>
-<section id="links" class="level2">
-<h2 data-anchor-id="links">Links</h2>
-<ul>
-<li><a href="https://pypi.org/project/nondim-slurry/">PyPI</a></li>
-<li><a href="https://anaconda.org/jnywong/nondim-slurry">Anaconda Cloud</a></li>
-</ul>
-</section>
-<section id="authors" class="level2">
-<h2 data-anchor-id="authors">Authors</h2>
-<ul>
-<li><a href="https://jnywong.github.io/"><strong>Jenny Wong</strong></a> - <em>University of Leeds - Institut de Physique du Globe de Paris - Institut des Sciences de la Terre</em></li>
-<li><a href="https://environment.leeds.ac.uk/see/staff/1225/dr-chris-davies"><strong>Chris Davies</strong></a> - <em>University of Leeds</em></li>
-<li><a href="https://eps.leeds.ac.uk/maths/staff/4042/professor-christopher-jones-"><strong>Chris Jones</strong></a> - <em>University of Leeds</em></li>
-</ul>
-</section>
-<section id="license" class="level2">
-<h2 data-anchor-id="license">License</h2>
-<p>This project is licensed under the MIT License - see the <a href="https://github.com/jnywong/nondim-slurry/blob/master/LICENSE.md">LICENSE.md</a> file for details</p>
-</section>
-<section id="acknowledgments" class="level2">
-<h2 data-anchor-id="acknowledgments">Acknowledgments</h2>
-<ul>
-<li>ERC SEIC</li>
-<li>Del Duca Foundation</li>
-<li>EPSRC Centre for Doctoral Training in Fluid Dynamics</li>
-</ul>
-<p><span class="emoji" data-emoji="tada">🎉</span></p>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 26, 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">July 26, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p><a href="vscode.html" target="_blank">These are the slides</a> for this presentation.</p>
 
 
-</section>
-</main> 
-  </div>
-</div>
- <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -402,6 +313,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

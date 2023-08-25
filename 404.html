@@ -76,9 +76,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -128,6 +128,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="/presentations.html" rel="" target="">
+ <span class="menu-text">Presentations</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="/projects.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
@@ -164,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="baskerville">baskerville <span class="quarto-category-count">(1)</span></div><div class="category" data-category="vscode">vscode <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -178,13 +182,69 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="baskerville,vscode" data-listing-date-sort="1690326000000" data-listing-file-modified-sort="1692973845595" data-listing-date-modified-sort="1690326000000" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="/./presentations/2023-07-26-vscode/index.html"> <img src="/presentations/2023-07-26-vscode/featured.png" class="thumbnail-image" alt="VSCode Remote Development slide cover"> </a></p>
+</div>
+<div class="body">
+<a href="/./presentations/2023-07-26-vscode/index.html">
+<h3 class="no-anchor listing-title">
+VSCode for Remote Development
+</h3>
+<div class="listing-subtitle">
 
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('baskerville'); return false;">
+baskerville
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('vscode'); return false;">
+vscode
+</div>
+</div>
+<a href="/./presentations/2023-07-26-vscode/index.html">
+<div class="listing-description">
+<p>Baskerville Remote Drop-In topic demonstrating VSCode for remote development.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="/./presentations/2023-07-26-vscode/index.html">
+<div class="listing-date">
+Jul 26, 2023
+</div>
+<div class="listing-author">
+Jenny Wong
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
