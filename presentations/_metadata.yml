@@ -2,7 +2,7 @@
 freeze: auto
 
 # Enable banner style title blocks
-title-block-banner: true
+title-block-banner: false
 
 # Default for table of contents
 toc: true
@@ -21,4 +21,4 @@ author:
     url: https://jnywong.github.io
 
 # Default fields for citation
-citation: true
+citation: false
