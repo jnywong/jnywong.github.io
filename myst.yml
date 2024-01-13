@@ -1,7 +1,7 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 project:
-  title: jnywong.github.io
+  title: Welcome
   description: Personal website of Jenny Wong
   keywords: []
   authors: []
@@ -11,8 +11,8 @@ project:
 site:
   template: book-theme
   title: jnywong.github.io
-  # options:
-  #   logo: site_logo.png
+  options:
+    logo: media/images/avatar.png
   nav: []
   # actions:
     # - title: Learn More
