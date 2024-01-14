@@ -8,7 +8,7 @@ author: Jenny Wong
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ```{image} ../media/images/paropy.png
-:alt: Beautiful Sunset
+:alt: 3D render showing the azimuthal flow velocity of a dynamo simulation with a stably-stratified F-layer at the base of the outer core.
 :width: 50%
 :align: center
 ```

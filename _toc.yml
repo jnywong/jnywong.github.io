@@ -26,6 +26,7 @@ chapters:
     - file: presentations/baskerville/batch-jobs
 - title: Projects
   sections:
-  - file: projects/slurpy.md
-  - file: projects/paropy.md
+  - file: projects/slurpy
+  - file: projects/paropy
+  - file: projects/convect-jl
 
