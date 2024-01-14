@@ -1,9 +1,10 @@
 ---
 title: "slurpy"
-
+author: Jenny Wong
 ---
 
-[![Static Badge](https://img.shields.io/badge/GitHub-slurpy-purple?logo=github)](https:github.com/jnywong/nondim-slurry)
+[![GitHub Badge](https://img.shields.io/badge/GitHub-slurpy-purple?logo=github)](https:github.com/jnywong/nondim-slurry)
+[![PyPI version](https://badge.fury.io/py/nondim-slurry.svg)](https://badge.fury.io/py/nondim-slurry)
 [![Build Status](https://travis-ci.org/jnywong/nondim-slurry.svg?branch=master)](https://travis-ci.org/jnywong/nondim-slurry)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4446750.svg)](https://doi.org/10.5281/zenodo.4446750)
 
