@@ -21,6 +21,9 @@ chapters:
   - title: Baskerville HPC
     sections:
     - file: presentations/baskerville/vscode-remote-development
+    - file: presentations/baskerville/first-time-access
+    - file: presentations/baskerville/baskerville-portal
+    - file: presentations/baskerville/batch-jobs
 - title: Projects
   sections:
   - file: proj1.md  
