@@ -1,0 +1,32 @@
+# Myst will respect:
+# 1. New pages
+#      - file: relative/path/to/page
+# 2. New sections without an associated page
+#      - title: Folder Title
+#        sections: ...
+# 3. New sections with an associated page
+#      - file: relative/path/to/page
+#        sections: ...
+#
+# Note: Titles defined on pages here are not recognized.
+#
+# This spec is based on the JupyterBook table of contents.
+# Learn more at https://jupyterbook.org/customize/toc.html
+format: jb-book
+root: index
+chapters:
+- file: about
+- title: Presentations
+  sections:
+  - title: Baskerville HPC
+    sections:
+    - file: presentations/baskerville/vscode-remote-development
+    - file: presentations/baskerville/first-time-access
+    - file: presentations/baskerville/baskerville-portal
+    - file: presentations/baskerville/batch-jobs
+- title: Projects
+  sections:
+  - file: projects/slurpy
+  - file: projects/paropy
+  - file: projects/convect-jl
+

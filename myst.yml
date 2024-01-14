@@ -1,0 +1,26 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  title: Welcome
+  description: Personal website of Jenny Wong
+  keywords: []
+  authors: []
+  github: https://github.com/jnywong/jnywong.github.io
+  # bibliography: []
+  license:
+    content: CC-BY-4.0
+    code: MIT
+  subject: jnywong.github.io
+site:
+  template: book-theme
+  title: jnywong.github.io
+  options:
+    logo: media/images/logo.png
+    analytics_google: G-33E6G42MQ3
+  nav: []
+  # actions:
+    # - title: Learn More
+      # url: https://mystmd.org/guide
+  domains:
+    - jnywong.github.io
+  
