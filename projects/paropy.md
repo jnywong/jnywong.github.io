@@ -7,6 +7,12 @@ author: Jenny Wong
 [![PyPI version](https://badge.fury.io/py/paropy.svg)](https://badge.fury.io/py/paropy)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+```{image} ../media/images/paropy.png
+:alt: Beautiful Sunset
+:width: 50%
+:align: center
+```
+
 An open source python package to process data from PARODY-JA4.3 dynamo simulations with a stably-stratified F-layer at the base of the outer core.
 
 ## Getting Started
@@ -29,7 +35,7 @@ Pip:
 pip install paropy
 ```
 
-Git: 
+Git:
 
 Find the Git repo [here](https://github.com/jnywong/nondim-slurry).
 
@@ -37,7 +43,7 @@ Find the Git repo [here](https://github.com/jnywong/nondim-slurry).
 Please note that iPython may not be compatible with jedi release 0.18.0. Please revert to version 0.17.2 for auto-complete features to work (see [here](https://github.com/ipython/ipython/issues/12740)).
 
 ## Package structure
-```
+```shell
 paropy/
   docs/
   paropy/
@@ -75,7 +81,7 @@ Example scripts can be found within the module `paropy`.
 
 2. Set path to simulation data by setting
 
-```
+```python
 run_ID = <run_ID> # PARODY simulation tag
 directory = <path_to_data>
 saveDir = <path_to_savefigs>
@@ -95,7 +101,7 @@ saveDir = <path_to_savefigs>
 
 2. Set path to simulation data and snapshot time by setting
 
-```
+```python
 run_ID, timestamp = 'c-200a', '16.84707134'
 directory = <path_to_data>
 saveDir = <path_to_savefigs>
@@ -113,7 +119,7 @@ saveDir = <path_to_savefigs>
 
 2. Set path to simulation data and snapshot time by setting
 
-```
+```python
 run_ID, timestamp = 'c-200a', '16.84707134'
 directory = <path_to_data>
 saveDir = <path_to_savefigs>

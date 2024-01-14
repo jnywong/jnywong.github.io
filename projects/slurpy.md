@@ -31,7 +31,7 @@ Git:
 Find the latest version of the repository [here](https://github.com/jnywong/nondim-slurry).
 
 ## Package structure
-```
+```shell
 slurpy/
   __init__.py
   coreproperties.py
@@ -62,7 +62,7 @@ slurpy/
 
 2. Enter some input parameters. For example, try:
 
-```
+```python
 # %% MODEL INPUTS
 # Show plots?
 plotOn=1 # show temp, xi, solid flux and density profiles
@@ -88,7 +88,7 @@ h=0.05 # stepsize of heat flux through parameter space
 
 2. Enter some input parameters. For example, try:
 
-```
+```python
 # %% MODEL INPUTS
 # Save plot?
 saveOn=0
