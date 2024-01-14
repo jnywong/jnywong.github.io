@@ -6,7 +6,7 @@ title: Welcome
 :class: col-gutter-left
 :alt: Profile picture of Dr Jenny Wong
 :align: center
-:width: 100%
+:width: 90%
 :::
 
 :::{table}
@@ -23,6 +23,6 @@ _Hellooo_! My name is Jenny and I am the Technical Content Developer at [2i2c](h
 
 My work is mainly focused on the Chan-Zuckerberg Initiative funded [Catalyst Project](https://czi-catalystproject.github.io/catalyst-project/), with the aim of providing research communities in Latin America and Africa with access to large-scale scientific infrastructure. As part of this effort, I will help develop community-based training materials for interactive cloud-native workflows in collaboration with [The Carpentries](https://carpentries.org/), [The Centre for Scientific Collaboration and Community Engagement (CSCCE)](https://www.cscce.org/), [Invest in Open Infrastructure (IOI)](http://investinopen.org/), [MetaDocencia](http://metadocencia.org/) and [Open Life Science (OLS)](https://openlifesci.org/).
 
-My background is in mathematics, with a special interest in geophysical fluid dynamics. She obtained a PhD in the subject with her thesis titled "A slurry model of the F-layer in the Earth's core".
+My background is in mathematics, with a special interest in geophysical fluid dynamics. I obtained a PhD in the subject with my thesis titled "A slurry model of the F-layer in the Earth's core".
 
-This website contains a [short bio](about.md) about me, as well as a collection of presentations and content related to my research projects and training materials.
+This website contains a [short bio](about.md) about me, as well as a collection of **presentations** and content related to my research **projects** and training materials.

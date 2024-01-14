@@ -26,5 +26,5 @@ chapters:
     - file: presentations/baskerville/batch-jobs
 - title: Projects
   sections:
-  - file: proj1.md  
+  - file: projects/slurpy.md  
 
