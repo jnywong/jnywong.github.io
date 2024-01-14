@@ -6,7 +6,7 @@
 
 ```{card} 
 :header: **Technical Content Developer**
-:footer: _2i2c | January 2023 - present_
+:footer: _2i2c | January 2024 - present_
 
 - Provide research communities in Latin America and Africa with access to large-scale scientific infrastructure
 - Develop community-based training materials for interactive cloud-native workflows in collaboration with [The Carpentries](https://carpentries.org/), [The Centre for Scientific Collaboration and Community Engagement (CSCCE)](https://www.cscce.org/), [Invest in Open Infrastructure (IOI)](http://investinopen.org/), [MetaDocencia](http://metadocencia.org/) and [Open Life Science (OLS)](https://openlifesci.org/)
