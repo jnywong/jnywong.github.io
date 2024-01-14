@@ -18,7 +18,9 @@ chapters:
 - file: about
 - title: Presentations
   sections:
-  - file: pres1.md
+  - title: Baskerville HPC
+    sections:
+    - file: presentations/baskerville/vscode-remote-development
 - title: Projects
   sections:
   - file: proj1.md  
