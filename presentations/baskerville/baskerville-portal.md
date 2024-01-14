@@ -1,7 +1,6 @@
 ---
 title: "Baskerville Basics - Baskerville Portal"
 date: 2023-05-13
-date-format: long
 author: "Jenny Wong"
 ---
 

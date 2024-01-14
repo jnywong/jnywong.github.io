@@ -1,7 +1,6 @@
 ---
 title: "Baskerville Basics - Batch Jobs"
 date: 2023-08-30
-date-format: long
 author: "Jenny Wong"
 ---
 

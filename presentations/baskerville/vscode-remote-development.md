@@ -1,7 +1,6 @@
 ---
 title: "VSCode for Remote Development"
 date: 2023-07-26
-date-format: long
 author: "Jenny Wong"
 venue:
   title: "Baskerville Remote Drop-In"
