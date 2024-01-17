@@ -16,7 +16,6 @@ site:
   title: jnywong.github.io
   options:
     logo: media/images/logo.png
-    analytics_google: G-33E6G42MQ3
   nav: []
   # actions:
     # - title: Learn More
