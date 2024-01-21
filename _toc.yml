@@ -24,6 +24,25 @@ chapters:
     - file: presentations/baskerville/first-time-access
     - file: presentations/baskerville/baskerville-portal
     - file: presentations/baskerville/batch-jobs
+    - file: presentations/baskerville/profiling/profiling
+    - file: presentations/baskerville/adep/adep
+    - file: presentations/baskerville/rse-data-ai/rse-data-ai
+    - file: presentations/baskerville/turing/turing
+  - title: BEAR
+    sections:
+    - file: presentations/BEAR/sc23/sc23
+    - file: presentations/BEAR/whpc/whpc
+    - file: presentations/BEAR/rsehpc/rsehpc
+    - file: presentations/BEAR/huggingface/huggingface
+    - file: presentations/BEAR/bc23/bc23
+    - file: presentations/BEAR/isc23/isc23
+    - file: presentations/BEAR/pinns/pinns
+  - title: Academia
+    sections:
+    - file: presentations/academia/agu/agu
+    - file: presentations/academia/isterre/isterre
+    - file: presentations/academia/sedi/sedi
+      title: SEDI 2020 – Session 7 Inner Core
 - title: Projects
   sections:
   - file: projects/slurpy
