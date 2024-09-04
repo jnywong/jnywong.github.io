@@ -18,6 +18,9 @@ chapters:
 - file: about
 - title: Presentations
   sections:
+  - title: 2i2c
+    sections:
+    - file: presentations/2i2c/rsecon24
   - title: Baskerville HPC
     sections:
     - file: presentations/baskerville/vscode-remote-development
@@ -48,4 +51,6 @@ chapters:
   - file: projects/slurpy
   - file: projects/paropy
   - file: projects/convect-jl
+  - file: projects/catalyst
+  - file: projects/hub-champion-training
 
