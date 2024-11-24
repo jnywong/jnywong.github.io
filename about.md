@@ -4,48 +4,55 @@
 
 ## Experience
 
-```{card} 
+```{card}
 :header: **Technical Content Developer**
-:footer: _2i2c | January 2024 - present_
+:footer: _2i2c | 2024 - present_
 
-- Provide research communities in Latin America and Africa with access to large-scale scientific infrastructure
-- Develop community-based training materials for interactive cloud-native workflows in collaboration with [The Carpentries](https://carpentries.org/), [The Centre for Scientific Collaboration and Community Engagement (CSCCE)](https://www.cscce.org/), [Invest in Open Infrastructure (IOI)](http://investinopen.org/), [MetaDocencia](http://metadocencia.org/) and [Open Life Science (OLS)](https://openlifesci.org/)
+- Developing community-based training materials for interactive cloud-native workflows as part of The Catalyst Project in collaboration with [The Carpentries](https://carpentries.org/), [The Centre for Scientific Collaboration and Community Engagement (CSCCE)](https://www.cscce.org/), [Invest in Open Infrastructure (IOI)](http://investinopen.org/), [MetaDocencia](http://metadocencia.org/) and [Open Life Science (OLS)](https://openlifesci.org/).
+- Implementing localisation CI/CD workflows with Jupyter Book and Crowdin for The Catalyst Project: [Hub Champion Training](https://catalystproject.cloud/hub-champion-training/) and NASA TOPST: [ScienceCore](https://sciencecore.github.io/climaterisk/intro.html) curricula.
+- Front-end development of the [HHMI CellMap Challenge website](https://cellmapchallenge.2i2c.cloud/) using Django and managing deployment with Kubernetes.
+- Continuously updating the [2i2c Service Guide](https://docs.2i2c.org/) and developing the main [2i2c.org](https://2i2c.org/) website, as well as contributing documentation to upstream open-source projects.
+- Leading community engagement and outreach activities, such as [hackathons](https://executablebooks.org/en/latest/blog/2024-06-14-project-pythia-mystmd/), [delivering training](https://catalystproject.cloud/blog/2024-08-23-hub-champion-training-reflections.html) and conference talks.
+- Managing and executing a communications strategy, including [blog posts](https://2i2c.org/blog/), social media campaigns and tracking engagement analytics.
+- Providing frontline and second-line support for 2i2c communities, including triage, JupyterHub administration, events management and gathering product insights.
 ```
 
-```{card} 
+```{card}
 :header: **Senior Research Software Engineer**
-:footer: _University of Birmingham, Birmingham | December 2021 - December 2023_
+:footer: _University of Birmingham, Birmingham | 2021 - 2023_
 
 - Accelerating and profiling data assimilation codes
-for space weather forecasts, which ingest up to
-250GB per hour of data from hundreds of stations
+for [space weather forecasts](https://serene.bham.ac.uk/), which ingest up to
+250GB per hour of RINEX data from hundreds of stations
 globally, and implementing interactive, web-based
-visualisations.
-- Certified NVIDIA Instructor providing data
+visualisations with Plotly.
+- Automating bioimaging microscopy workflows in the laboratory using LabVIEW to control a collaborative robot and other instruments for the [Midlands Open Bioimaging](https://midlandsinnovation.org.uk/community/midlands-open-bioimaging/) network.
+- Certified [NVIDIA DLI Instructor and Ambassador](https://www.nvidia.com/en-gb/training/educator-programs/university-ambassador-program/) providing data
 engineering and deep learning training for
-researchers, and general high-performance
-computing support.
+researchers.
+- Certified [Carpentries](https://carpentries.org/) Instructor for Software Carpentry.
+- General Tier 2 HPC support for [Baskerville](https://www.baskerville.ac.uk/).
 ```
 
-```{card} 
+```{card}
 :header: **Postdoctoral Researcher**
-:footer: _Institut des Sciences de la Terre, Grenoble | July 2020 - November 2021_
+:footer: _Institut des Sciences de la Terre, Grenoble | 2020 - 2021_
 
-- Developed a model of differential equations
+- Developing a model of differential equations
 describing the physics of phase change and
-compaction of a solid-liquid system, and solved
+compaction of a solid-liquid system, and solving
 them using finite volume methods in Python.
 ```
 
-```{card} 
+```{card}
 :header: **Postdoctoral Researcher**
-:footer: _Institut de Physique du Globe de Paris, Paris | February 2019 - July 2020_
+:footer: _Institut de Physique du Globe de Paris, Paris | 2019 - 2020_
 
-- Ran large-scale numerical simulations solving the
+- Running large-scale numerical simulations solving the
 magneto-hydrodynamic equations describing the
 Earth’s dynamo on high-performance computers
 using Fortran and OpenMP, and post-processed
-large data sets in Python.
+large data sets in [Python (`paropy`)](projects/paropy.md).
 ```
 
 ---
@@ -56,14 +63,14 @@ large data sets in Python.
 
 :::{card}
 :header: **PhD, MSc Fluid Dynamics**
-:footer: _September 2014 - February 2019_
+:footer: _2014 - 2018_
 _University of Leeds, Leeds_ \
 [Thesis](https://etheses.whiterose.ac.uk/23167/): A Slurry Model of the F-Layer in the Earth’s Core.
 :::
 
 :::{card}
 :header: **MMath, BSc Mathematics**
-:footer: _September 2009 - February 2013_
+:footer: _2009 - 2013_
 _University of Leeds, Leeds_ \
 First Class Honours.
 :::
