@@ -21,6 +21,7 @@ chapters:
   - title: 2i2c
     sections:
     - file: talks/2i2c/rsecon24
+    - file: talks/2i2c/hpc-ai-uk
   - title: Baskerville HPC
     sections:
     - file: talks/baskerville/vscode-remote-development
