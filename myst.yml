@@ -15,8 +15,14 @@ site:
   template: book-theme
   title: jnywong.github.io
   options:
-    logo: media/images/logo.png
-  nav: []
+    logo_text: Jenny Wong
+  nav:
+    - title: About
+      url: /about
+    - title: Projects
+      url: /projects
+    - title: Talks
+      url: /talks
   # actions:
     # - title: Learn More
       # url: https://mystmd.org/guide
