@@ -54,4 +54,5 @@ chapters:
   - file: projects/convect-jl
   - file: projects/catalyst
   - file: projects/hub-champion-training
+  - file: projects/sciencecore
 
