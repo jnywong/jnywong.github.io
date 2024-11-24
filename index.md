@@ -26,4 +26,4 @@ My work is mainly focused on the Chan-Zuckerberg Initiative-funded [Catalyst Pro
 
 My background is in mathematics, with a special interest in geophysical fluid dynamics. I obtained a PhD in the subject with my thesis titled "A slurry model of the F-layer in the Earth's core".
 
-This website contains a [short bio](about.md) about me, as well as a collection of **presentations** and content related to my research **projects** and training materials.
+This website contains a [short bio](about.md) about me, as well as a collection of **talks** and content related to my research **projects** and training materials.
