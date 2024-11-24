@@ -16,13 +16,7 @@ site:
   title: jnywong.github.io
   options:
     logo_text: Jenny Wong
-  nav:
-    - title: About
-      url: /about
-    - title: Projects
-      url: /projects
-    - title: Talks
-      url: /talks
+  # nav: []
   # actions:
     # - title: Learn More
       # url: https://mystmd.org/guide
