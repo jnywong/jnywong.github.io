@@ -5,6 +5,7 @@ author: "Jenny Wong"
 venue:
   title: RSECon24
   url: https://rsecon24.society-rse.org/
+doi: 10.5281/zenodo.14290446
 ---
 
 :::{iframe} https://docs.google.com/presentation/d/15tbG-ecolD4fFtcmMw1TsHzu-KuZ306CZFu52D749XI/embed?start=false&loop=false&delayms=3000
