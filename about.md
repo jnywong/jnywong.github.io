@@ -5,7 +5,7 @@
 ## Experience
 
 ```{card}
-:header: **Technical Content Developer**
+:header: **Product Manager**
 :footer: _2i2c | 2024 - present_
 
 - Developing community-based training materials for interactive cloud-native workflows as part of The Catalyst Project in collaboration with [The Carpentries](https://carpentries.org/), [The Centre for Scientific Collaboration and Community Engagement (CSCCE)](https://www.cscce.org/), [Invest in Open Infrastructure (IOI)](http://investinopen.org/), [MetaDocencia](http://metadocencia.org/) and [Open Life Science (OLS)](https://openlifesci.org/).
