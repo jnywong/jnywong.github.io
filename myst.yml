@@ -54,7 +54,8 @@ project:
         - file: projects/catalyst
         - file: projects/hub-champion-training
         - file: projects/sciencecore
-        - file: projects/cellmap                      
+        - file: projects/cellmap            
+        - file: projects/jet-breakup
 
 site:
   template: book-theme
