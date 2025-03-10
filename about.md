@@ -5,16 +5,16 @@
 ## Experience
 
 ```{card}
-:header: **Product Manager**
+:header: **Open Source Applications Engineer**
 :footer: _2i2c | 2024 - present_
 
+- Front-end development of the [HHMI CellMap Challenge website](https://cellmapchallenge.2i2c.cloud/) using Django and managing deployment with Kubernetes.
+- Providing frontline and second-line support for 2i2c communities, including triage, JupyterHub administration, events management and gathering product insights.
+- Leading community engagement and outreach activities, such as [hackathons](https://executablebooks.org/en/latest/blog/2024-06-14-project-pythia-mystmd/), [delivering training](https://catalystproject.cloud/blog/2024-08-23-hub-champion-training-reflections.html) and conference talks.
+- Continuously updating the [2i2c Service Guide](https://docs.2i2c.org/) and developing the main [2i2c.org](https://2i2c.org/) website, as well as contributing documentation to upstream open-source projects.
 - Developing community-based training materials for interactive cloud-native workflows as part of The Catalyst Project in collaboration with [The Carpentries](https://carpentries.org/), [The Centre for Scientific Collaboration and Community Engagement (CSCCE)](https://www.cscce.org/), [Invest in Open Infrastructure (IOI)](http://investinopen.org/), [MetaDocencia](http://metadocencia.org/) and [Open Life Science (OLS)](https://openlifesci.org/).
 - Implementing localisation CI/CD workflows with Jupyter Book and Crowdin for The Catalyst Project: [Hub Champion Training](https://catalystproject.cloud/hub-champion-training/) and NASA TOPST: [ScienceCore](https://sciencecore.github.io/climaterisk/intro.html) curricula.
-- Front-end development of the [HHMI CellMap Challenge website](https://cellmapchallenge.2i2c.cloud/) using Django and managing deployment with Kubernetes.
-- Continuously updating the [2i2c Service Guide](https://docs.2i2c.org/) and developing the main [2i2c.org](https://2i2c.org/) website, as well as contributing documentation to upstream open-source projects.
-- Leading community engagement and outreach activities, such as [hackathons](https://executablebooks.org/en/latest/blog/2024-06-14-project-pythia-mystmd/), [delivering training](https://catalystproject.cloud/blog/2024-08-23-hub-champion-training-reflections.html) and conference talks.
 - Managing and executing a communications strategy, including [blog posts](https://2i2c.org/blog/), social media campaigns and tracking engagement analytics.
-- Providing frontline and second-line support for 2i2c communities, including triage, JupyterHub administration, events management and gathering product insights.
 ```
 
 ```{card}

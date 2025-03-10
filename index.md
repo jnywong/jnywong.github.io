@@ -13,14 +13,14 @@ title: Welcome
 :class: col-body-right
 |👋 Dr Jenny Wong (she/her) |
 |---|
-|📖 Product Manager @[2i2c-org](https://2i2c.org/) |
+|🌍 Open Source Applications Engineer @[2i2c-org](https://2i2c.org/) |
 |👩‍💻 Ex-Research Software Engineer @[bear-rsg](https://github.com/bear-rsg) @[baskerville-hpc](https://github.com/baskerville-hpc) |
 |🇫🇷 Former post-doctorante @[IPGP](https://github.com/IPGP) et @[ISTerre](https://www.isterre.fr/) |
 |💧 PhD graduate @[CDTFluidsLeeds](https://fluid-dynamics.leeds.ac.uk/) |
 
 :::
 
-_Hellooo_! My name is Jenny and I am a Product Manager at [2i2c](https://2i2c.org/), a US-based non-profit that provides a global network of interactive computing platforms for research and education communities. I primarily support folks with getting the most out of cloud-native workflows through documentation, training and community engagement. I am passionate about democratising access to large-scale, scientific cyberinfrastructure and love using my deep technical skills and my friendly communication skills to bridge together technology and people.
+_Hellooo_! My name is Jenny and I am an Open Source Applications Engineer at [2i2c](https://2i2c.org/), a US-based non-profit that provides a global network of interactive computing platforms for research and education communities. I primarily support folks with getting the most out of cloud-native workflows through building user-centered applications that integrate open source technologies. I am passionate about democratising access to large-scale, scientific cyberinfrastructure and love using my deep technical skills and my friendly communication skills to bridge together technology and people.
 
 Some of the things I get up to include:
 
