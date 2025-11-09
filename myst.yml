@@ -18,6 +18,7 @@ project:
       children:
         - title: 2i2c
           children:
+            - file: talks/2i2c/jupytercon25
             - file: talks/2i2c/rsecon24
             - file: talks/2i2c/hpc-ai-uk
         - title: Baskerville HPC
