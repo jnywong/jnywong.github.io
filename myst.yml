@@ -62,7 +62,8 @@ site:
   template: book-theme
   title: jnywong.github.io
   options:
-    logo: media/images/logo.gif
+    logo: media/images/logo_black.gif
+    logo_dark: media/images/logo_white.gif
   # nav: []
   # actions:
     # - title: Learn More
