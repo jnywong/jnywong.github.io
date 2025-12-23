@@ -6,4 +6,9 @@ venue:
   title: "University of Warwick"
 ---
 
-[![Click here](./thumbnail.png)](./rse-data-ai.pdf)
+:::{image} ./thumbnail.png
+:width: 100%
+:alt: "Cover shot of workshop slides."
+:::
+
+Download slides: [PDF](./rse-data-ai.pdf)

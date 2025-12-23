@@ -6,4 +6,9 @@ venue:
   title: "The Alan Turing Institute"
 ---
 
-[![Click here](./thumbnail.png)](./turing.pdf)
+:::{image} ./thumbnail.png
+:width: 100%
+:alt: "Cover shot of workshop slides."
+:::
+
+Download slides: [PDF](./turing.pdf)

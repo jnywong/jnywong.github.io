@@ -6,4 +6,9 @@ venue:
   title: "AGU 2020"
 ---
 
-[![Click here](./thumbnail.png)](./agu.pdf)
+::: {image} ./thumbnail.png
+:width: 100%
+:alt: "Cover shot of talk slides."
+:::
+
+Download slides: [PDF](./agu.pdf)

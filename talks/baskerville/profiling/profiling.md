@@ -4,4 +4,8 @@ date: 2023-11-28
 author: "Jenny Wong"
 ---
 
-[![Click here](./thumbnail.png)](./profiling.pdf)
+:::{image} ./thumbnail.png
+:alt: "Cover shot of talk slides."
+:::
+
+Download slides: [PDF](./profiling.pdf)

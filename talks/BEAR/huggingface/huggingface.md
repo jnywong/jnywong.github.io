@@ -6,4 +6,9 @@ venue:
   title: "BEAR Software Updates 10"
 ---
 
-[![Click here](./thumbnail.png)](./huggingface.pdf)
+:::{image} ./thumbnail.png
+:width: 100%
+:alt: "Cover shot of talk slides."
+:::
+
+Download slides: [PDF](./huggingface.pdf)

@@ -6,4 +6,9 @@ venue:
   title: "University of Birmingham"
 ---
 
-[![Click here](./thumbnail.png)](./adep.pdf)
+:::{image} ./thumbnail.png
+:width: 100%
+:alt: "Cover shot of workshop slides."
+:::
+
+Download slides: [PDF](./adep.pdf)
