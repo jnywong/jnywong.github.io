@@ -6,8 +6,9 @@
 
 ```{card}
 :header: **Open Source Applications Engineer**
-:footer: _2i2c | 2024 - present_
+:footer: 2i2c | 2024 - present
 
+- Building observability and monitoring tools for JupyterHub deployments with Prometheus and Grafana to alleviate worries about runaway costs for users in the cloud, such as [jupyterhub-cost-monitoring](https://github.com/2i2c-org/jupyterhub-cost-monitoring/) and maintaining [jupyterhub/grafana-dashboards](https://github.com/jupyterhub/grafana-dashboards).
 - Front-end development of the [HHMI CellMap Challenge website](https://cellmapchallenge.2i2c.cloud/) using Django and managing deployment with Kubernetes.
 - Providing frontline and second-line support for 2i2c communities, including triage, JupyterHub administration, events management and gathering product insights.
 - Leading community engagement and outreach activities, such as [hackathons](https://executablebooks.org/en/latest/blog/2024-06-14-project-pythia-mystmd/), [delivering training](https://catalystproject.cloud/blog/2024-08-23-hub-champion-training-reflections.html) and conference talks.
@@ -19,7 +20,7 @@
 
 ```{card}
 :header: **Senior Research Software Engineer**
-:footer: _University of Birmingham, Birmingham | 2021 - 2023_
+:footer: University of Birmingham, Birmingham | 2021 - 2023
 
 - Accelerating and profiling data assimilation codes
 for [space weather forecasts](https://serene.bham.ac.uk/), which ingest up to
@@ -36,7 +37,7 @@ researchers.
 
 ```{card}
 :header: **Postdoctoral Researcher**
-:footer: _Institut des Sciences de la Terre, Grenoble | 2020 - 2021_
+:footer: Institut des Sciences de la Terre, Grenoble | 2020 - 2021
 
 - Developing a model of differential equations
 describing the physics of phase change and
@@ -46,7 +47,7 @@ them using finite volume methods in Python.
 
 ```{card}
 :header: **Postdoctoral Researcher**
-:footer: _Institut de Physique du Globe de Paris, Paris | 2019 - 2020_
+:footer: Institut de Physique du Globe de Paris, Paris | 2019 - 2020
 
 - Running large-scale numerical simulations solving the
 magneto-hydrodynamic equations describing the
@@ -63,14 +64,14 @@ large data sets in [Python (`paropy`)](projects/paropy.md).
 
 :::{card}
 :header: **PhD, MSc Fluid Dynamics**
-:footer: _2014 - 2018_
+:footer: 2014 - 2018
 _University of Leeds, Leeds_ \
 [Thesis](https://etheses.whiterose.ac.uk/23167/): A Slurry Model of the F-Layer in the Earth’s Core.
 :::
 
 :::{card}
 :header: **MMath, BSc Mathematics**
-:footer: _2009 - 2013_
+:footer: 2009 - 2013
 _University of Leeds, Leeds_ \
 First Class Honours.
 :::
@@ -83,24 +84,24 @@ First Class Honours.
 
 ```{card}
 :header: Earth and Planetary Science Letters 560, 116791 (2021)
-:footer: _J Wong, CJ Davies, CA Jones_
+:footer: J Wong, CJ Davies, CA Jones
 **[A regime diagram for the slurry F-layer at the base of Earth's outer core](https://www.sciencedirect.com/science/article/am/pii/S0012821X21000509)**
 ```
 
 ```{card}
 :header: Astronomy & Geophysics 60 (3), 3.30-3.35 (2019)
-:footer: _C Hardy, J Wong_
-**[Stably stratified layers within Earth's core](https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/520577/1/Hardy_2019.pdf)**
+:footer: C Hardy, J Wong
+**[Stably stratified layers within Earth's core](https://www.research-collection.ethz.ch/server/api/core/bitstreams/7774bb68-3fd3-4314-8c99-0e4d3081a09e/content)**
 ```
 
 ```{card}
 :header: Geophysical Journal International 214 (3), 2236-2249 (2018)
-:footer: _J Wong, CJ Davies, CA Jones_
+:footer: J Wong, CJ Davies, CA Jones
 **[A Boussinesq slurry model of the F-layer at the base of Earth’s outer core](https://academic.oup.com/gji/article-pdf/214/3/2236/36134435/ggy245.pdf)**
 ```
 
 ```{card}
-:header:Journal of Rheology 61 (3), 467-476 (2017)
-:footer: _E Greiciunas, J Wong, I Gorbatenko, J Hall, MCT Wilson, N Kapur, et al._
+:header: Journal of Rheology 61 (3), 467-476 (2017)
+:footer: E Greiciunas, J Wong, I Gorbatenko, J Hall, MCT Wilson, N Kapur, et al.
 **[Design and operation of a Rayleigh Ohnesorge jetting extensional rheometer (ROJER) to study extensional properties of low viscosity polymer solutions](https://eprints.whiterose.ac.uk/113583/1/revised_version.pdf)**
 ```
