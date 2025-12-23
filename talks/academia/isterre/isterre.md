@@ -6,4 +6,9 @@ venue:
   title: "ISTerre, Université de Grenoble-Alpes"
 ---
 
-[![Click here](./thumbnail.png)](./isterre.pdf)
+:::{image} ./thumbnail.png
+:width: 100%
+:alt: "Cover shot of talk slides."
+:::
+
+Download slides: [PDF](./isterre.pdf)

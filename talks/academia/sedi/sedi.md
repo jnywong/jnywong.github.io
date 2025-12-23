@@ -6,4 +6,9 @@ venue:
   title: "SEDI 2020"
 ---
 
-[![Click here](./thumbnail.png)](./sedi.pdf)
+::: {image} ./thumbnail.png
+:width: 100%
+:alt: "Cover shot of talk slides."
+:::
+
+Download slides: [PDF](./sedi.pdf)

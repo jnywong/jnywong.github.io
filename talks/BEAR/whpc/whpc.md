@@ -6,4 +6,9 @@ venue:
   title: "Women in HPC Workshop @Supercomputing 2023"
 ---
 
-[![Click here](./thumbnail.png)](./whpc.pdf)
+:::{image} ./thumbnail.png
+:width: 100%
+:alt: "Cover shot of workshop slides."
+:::
+
+Download slides: [PDF](./whpc.pdf)

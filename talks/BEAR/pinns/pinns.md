@@ -6,4 +6,9 @@ venue:
   title: "RSG Demos"
 ---
 
-[![Click here](./thumbnail.png)](./pinns.pdf)
+:::{image} ./thumbnail.png
+:width: 100%
+:alt: "Cover shot of talk slides."
+:::
+
+Download slides: [PDF](./pinns.pdf)

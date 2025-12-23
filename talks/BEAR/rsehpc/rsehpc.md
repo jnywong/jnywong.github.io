@@ -6,4 +6,9 @@ venue:
   title: "RSE in HPC Workshop @Supercomputing 2023"
 ---
 
-[![Click here](./thumbnail.png)](./rsehpc.pdf)
+:::{image} ./thumbnail.png
+:width: 100%
+:alt: "Cover shot of talk slides."
+:::
+
+Download slides: [PDF](./rsehpc.pdf)
