@@ -136,3 +136,13 @@ input:focus-visible {
 .bg-\[\#656c85cc\] {
     background-color: rgba(var(--hover-green));
 }
+
+/* Lists */
+
+ul.emoji {
+  list-style: none;
+}
+
+ul.emoji li::marker {
+  content: "👉 ";
+}
