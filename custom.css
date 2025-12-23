@@ -15,6 +15,14 @@ html {
     font-family: "Verdana", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
+.text-blue-400 {
+  color: rgb(var(--green));
+}
+
+.hover\:text-blue-500:hover {
+  color: rgb(var(--dark-green));
+}
+
 /* Background colours */
 
 .bg-white, .bg-white\/80 {
@@ -23,6 +31,10 @@ html {
 
 .bg-white\/80, .bg-gray-50, .article table tr:hover td {
   background-color: rgb(var(--dark-beige));
+}
+
+.bg-blue-50 {
+  background-color: rgb(var(--hover-green));
 }
 
 .dark .dark\:bg-stone-900 {
@@ -139,10 +151,24 @@ input:focus-visible {
 
 /* Lists */
 
-ul.emoji {
+ul {
   list-style: none;
 }
 
-ul.emoji li::marker {
-  content: "👉 ";
+ul li::marker {
+  content: "🌿 ";
+}
+
+/* Code */
+
+.myst-code-body {
+    background-color: rgb(var(--dark-beige)) !important;
+}
+
+.myst-code-copy-icon {
+
+}
+
+.article :where(code):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    color: rgb(var(--dark-green));
 }
