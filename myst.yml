@@ -62,7 +62,7 @@ site:
   template: book-theme
   title: jnywong.github.io
   options:
-    logo_text: Jenny Wong
+    logo: media/images/logo.gif
   # nav: []
   # actions:
     # - title: Learn More
