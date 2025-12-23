@@ -64,6 +64,7 @@ site:
   options:
     logo: media/images/logo_black.gif
     logo_dark: media/images/logo_white.gif
+    hide_footer_links: true
     style: ./custom.css
   # nav: []
   # actions:
