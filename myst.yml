@@ -18,45 +18,45 @@ project:
       children:
         - title: 2i2c
           children:
-            - file: talks/2i2c/jupytercon25
-            - file: talks/2i2c/rsecon24
-            - file: talks/2i2c/hpc-ai-uk
+            - file: talks/2i2c/jupytercon25.md
+            - file: talks/2i2c/rsecon24.md
+            - file: talks/2i2c/hpc-ai-uk.md
         - title: Baskerville HPC
           children:
-          - file: talks/baskerville/vscode-remote-development
-          - file: talks/baskerville/first-time-access
-          - file: talks/baskerville/baskerville-portal
-          - file: talks/baskerville/batch-jobs
-          - file: talks/baskerville/profiling/profiling
-          - file: talks/baskerville/adep/adep
-          - file: talks/baskerville/rse-data-ai/rse-data-ai
-          - file: talks/baskerville/turing/turing
+          - file: talks/baskerville/vscode-remote-development.md
+          - file: talks/baskerville/first-time-access.md
+          - file: talks/baskerville/baskerville-portal.md
+          - file: talks/baskerville/batch-jobs.md
+          - file: talks/baskerville/profiling/profiling.md
+          - file: talks/baskerville/adep/adep.md
+          - file: talks/baskerville/rse-data-ai/rse-data-ai.md
+          - file: talks/baskerville/turing/turing.md
         - title: BEAR
           children:
-          - file: talks/BEAR/sc23/sc23
-          - file: talks/BEAR/whpc/whpc
-          - file: talks/BEAR/rsehpc/rsehpc
-          - file: talks/BEAR/huggingface/huggingface
-          - file: talks/BEAR/bc23/bc23
-          - file: talks/BEAR/isc23/isc23
-          - file: talks/BEAR/pinns/pinns
+          - file: talks/BEAR/sc23/sc23.md
+          - file: talks/BEAR/whpc/whpc.md
+          - file: talks/BEAR/rsehpc/rsehpc.md
+          - file: talks/BEAR/huggingface/huggingface.md
+          - file: talks/BEAR/bc23/bc23.md
+          - file: talks/BEAR/isc23/isc23.md
+          - file: talks/BEAR/pinns/pinns.md
         - title: Academia
           children:
-          - file: talks/academia/agu/agu
-          - file: talks/academia/isterre/isterre
-          - file: talks/academia/sedi/sedi
+          - file: talks/academia/agu/agu.md
+          - file: talks/academia/isterre/isterre.md
+          - file: talks/academia/sedi/sedi.md
             title: SEDI 2020 – Session 7 Inner Core
     - title: Projects
       children:
-        - file: projects/slurpy
-        - file: projects/paropy
-        - file: projects/convect-jl
-        - file: projects/spaceweather
-        - file: projects/catalyst
-        - file: projects/hub-champion-training
-        - file: projects/sciencecore
-        - file: projects/cellmap            
-        - file: projects/jet-breakup
+        - file: projects/slurpy.md
+        - file: projects/paropy.md
+        - file: projects/convect-jl.md
+        - file: projects/spaceweather.md
+        - file: projects/catalyst.md
+        - file: projects/hub-champion-training.md
+        - file: projects/sciencecore.md
+        - file: projects/cellmap.md
+        - file: projects/jet-breakup.md
 
 site:
   template: book-theme
@@ -64,6 +64,7 @@ site:
   options:
     logo: media/images/logo_black.gif
     logo_dark: media/images/logo_white.gif
+    style: ./custom.css
   # nav: []
   # actions:
     # - title: Learn More
